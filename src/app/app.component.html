@@ -1,0 +1,88 @@
+<div class="navbar-container">
+  <div class="navbar-left">
+    <span [ngClass]="isTouchDevice == true ? 'new' : ''"
+      >Zoé BERTRAND - ART-THERAPEUTE</span
+    >
+  </div>
+  <div class="navbar-right" *ngIf="!isTouchDevice">
+    <div
+      class="bouton-nav"
+      [ngClass]="isAPropos == true ? 'select-bottom' : ''"
+      (click)="navigateAPropos()"
+    >
+      A propos
+    </div>
+    <span>|</span>
+    <div
+      class="bouton-nav"
+      [ngClass]="isArtTherapie == true ? 'select-bottom' : ''"
+      (click)="navigateArtTherapie()"
+    >
+      L'art-Therapie
+    </div>
+    <span>|</span>
+    <div
+      class="bouton-nav"
+      [ngClass]="isConsultations == true ? 'select-bottom' : ''"
+      (click)="navigateConsultations()"
+    >
+      Consultations
+    </div>
+    <span>|</span>
+    <div
+      class="bouton-nav"
+      [ngClass]="isContact == true ? 'select-bottom' : ''"
+      (click)="navigateContact()"
+    >
+      Contact
+    </div>
+  </div>
+</div>
+<div class="fond">
+  <div *ngIf="isAPropos">
+    <div *ngIf="!isTouchDevice" class="apropos-fond">
+      <div class="flex-dir-img">
+        <div class="image">
+          <img
+            src="../assets/images/photoCopie.jpg"
+            class="image-pp"
+            alt="Ma photo"
+          />
+        </div>
+        <div class="zone-texte">
+          <div class="titre">A PROPOS</div>
+          <div class="sous-titre">ZOÉ BERTRAND ART-THERAPEUTE</div>
+          <div class="texte">
+            {{ texte1 }}
+          </div>
+        </div>
+      </div>
+
+      <div>blalba</div>
+    </div>
+
+    <div *ngIf="isTouchDevice" class="apropos-fond2">
+      <div class="image2">
+        <img
+          src="../assets/images/photoCopie.jpg"
+          class="image-pp2"
+          alt="Ma photo"
+        />
+      </div>
+
+      <div class="zone-texte">
+        <div class="titre">A PROPOS</div>
+        <div class="sous-titre">ZOÉ BERTRAND ART-THERAPEUTE</div>
+        <div class="texte">
+          {{ texte1 }}
+        </div>
+      </div>
+
+      <div>blalba</div>
+    </div>
+  </div>
+
+  <div *ngIf="isArtTherapie" class="apropos-fond">isArtTherapie</div>
+  <div *ngIf="isConsultations" class="apropos-fond">isConsultations</div>
+  <div *ngIf="isContact" class="apropos-fond">isContact</div>
+</div>
