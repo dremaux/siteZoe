@@ -44,7 +44,7 @@
 .fond {
   background-size: cover;
   background-position: center;
-  background-image: url("../assets/images/fond.jpg");
+  background-image: url("../assets/images/fond3.jpg");
   position: absolute;
 
   width: 100%;
@@ -63,12 +63,12 @@
   margin: 5px;
   padding: 1%;
   border-radius: 5px;
-  width: 99%;
 }
 
 .flex-dir-img {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
 }
 
 .apropos-fond2 {
@@ -89,8 +89,6 @@
 
 .image {
   display: flex;
-  width: 40%;
-  height: auto;
   max-width: 300px;
   border-radius: 20px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Réduire l'ombre */
@@ -103,6 +101,8 @@
 }
 
 .image-pp {
+  display: flex;
+  margin: auto;
   width: 100%;
   border-radius: 20px;
 }
@@ -120,22 +120,59 @@
 }
 
 .zone-texte {
-  border-left: 1 solid black;
-  width: 57%;
+  border-left: 1px solid black;
+  margin-left: 2%;
   
-  padding: 3%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 
 
 .titre {
- height: 20%;
+ font-size: 50px;
 }
 
 .sous-titre {
-  height: 20%;
+  font-size: 25px;
 }
 
 .texte {
   height: 60%;
 }
+
+.color-sous-titre {
+  color: rgb(152, 152, 152);
+}
+
+.espace-div {
+  margin-bottom: 20px;
+}
+
+.texte-propos1 {
+  line-height: 1.5; 
+}
+
+.texte-propos2 {
+  line-height: 1.5; 
+}
+
+.texte-propos3 {
+  line-height: 1.5; 
+}
+
+.ppp {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  flex-direction: row;
+}
+
+.ppp1 {
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+

@@ -7,13 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  isAPropos:boolean = true;
+  isAPropos:boolean = false;
   isArtTherapie:boolean = false;
   isConsultations:boolean = false;
-  isContact:boolean = false;
+  isContact:boolean = true;
   isTouchDevice?: boolean;
 
-  texte1:string = "Depuis mon plus jeune âge, j'ai été plongée dans un environnement artistique, ce qui m'a encouragée à explorer naturellement et à apprécier une variété de médiums. Que ce soit à travers l'écriture, le dessin, la peinture ou encore la photographie, toutes ces formes d'expression ont finalement toujours constitué l'essence de mes centres d'intérêt. Progressivement, j'ai mis des mots sur ma pratique, et pris conscience des bien faits de la création dans ma vie personnelle.";
 
   ngOnInit() {
     this.isTouchDevice = navigator.maxTouchPoints > 0;

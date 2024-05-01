@@ -38,30 +38,104 @@
     </div>
   </div>
 </div>
+
 <div class="fond">
   <div *ngIf="isAPropos">
     <div *ngIf="!isTouchDevice" class="apropos-fond">
       <div class="flex-dir-img">
         <div class="image">
           <img
-            src="../assets/images/photoCopie.jpg"
+            src="../assets/images/PhotoZoe.jpg"
             class="image-pp"
             alt="Ma photo"
           />
         </div>
         <div class="zone-texte">
-          <div class="titre">A PROPOS</div>
-          <div class="sous-titre">ZOÉ BERTRAND ART-THERAPEUTE</div>
+          <div class="titre text-style">A PROPOS</div>
+          <div class="sous-titre text-style">
+            <span>ZOÉ BERTRAND</span><br />
+            <span class="color-sous-titre">ART-THERAPEUTE</span>
+          </div>
           <div class="texte">
-            {{ texte1 }}
+            <span class="texte-propos1"
+              >Depuis mon plus jeune âge, j’ai été plongée dans un environnement
+              artistique, ce qui m’a encouragée à explorer naturellement et à
+              apprécier une variété de médiums. Que ce soit l’écriture, le
+              dessin, la peinture ou encore la photographie, toutes ces formes
+              d’expression ont finalement toujours constitué l’essence de mes
+              centres d’intérêt. Progressivement, j’ai mis des mots sur ma
+              pratique, et pris conscience des bienfaits de la création dans ma
+              vie personnelle.</span
+            >
           </div>
         </div>
       </div>
 
-      <div>blalba</div>
+      <div class="espace-div">
+        <span class="texte-propos2"
+          >Aujourd’hui formée et diplômée dans les arts appliqués, et certifiée
+          en artthérapie, j’ai fait de cette passion mon métier, consciente de
+          l’impact profond que l’art peut avoir sur le psychisme. Ayant toujours
+          eu une grande curiosité pour la psychologie et pour la compréhension
+          du fonctionnement humain, s’est imposé à moi le besoin d’exploiter le
+          côté thérapeutique de l’art en élaborant des protocoles pour aider et
+          soulager à travers lui. À ce jour, je suis pleinement convaincue du
+          potentiel et du pouvoir transformateur que peut apporter l’art dans le
+          processus de guérison.</span
+        >
+      </div>
+
+      <div class="espace-div">
+        <span class="texte-propos3"
+          >En tant qu’art-thérapeute, je m’engage à vous accompagner, à vous
+          guider, et à vous soutenir avec respect et bienveillance dans votre
+          cheminement personnel. Ma mission est de vous encourager à explorer
+          votre monde intérieur à travers l’expression artistique pour vous
+          aider à atteindre un état de mieux-être.</span
+        >
+      </div>
+
+      <div class="espace-div">
+        <span class="">PARCOURS</span><br /><br />
+
+        <span class="">2024</span><br />
+        <span class="">Certification d’art-thérapie.</span><br /><br />
+
+        <span class="">2023</span><br />
+        <span class=""
+          >Assistante art-thérapeute à la clinique psychiatrique, Maison de
+          Santé Mailhol dans le cadre d’un stage.<br />
+          - Accompagnement de patients dans l’atelier.<br />
+          - Création et animation d’un suivi d’ateliers pour un groupe de
+          patients<br />
+          - Petites interventions pour des exercices d’art-thérapie en hôpital
+          de jour.<br /><br />
+        </span>
+
+        <span class="">Depuis 2021</span><br />
+        <span class=""
+          >Animatrice et AVL (Accompagnante de vie et de loisirs), sur les temps
+          périscolaires.<br />
+          - Accompagnement d’un enfant en situation de handicap dans diverses
+          activités ludiques, artistiques …<br />
+          - Mise en œuvre également de diverses animations pour des groupes
+          d’enfants.<br /><br />
+        </span>
+
+        <span class="">2020</span><br />
+        <span class=""
+          >Licence d’Arts, parcours Design, Prospective et Société.<br /><br
+        /></span>
+
+        <span class="">2018</span><br />
+        <span class="">BTS en Design d’espace<br /><br /></span>
+
+        <span class="">2016</span><br />
+        <span class="">Mise à niveau en arts appliqués<br /><br /></span>
+      </div>
     </div>
 
-    <div *ngIf="isTouchDevice" class="apropos-fond2">
+    <!-- <div *ngIf="isTouchDevice" class="apropos-fond2">
       <div class="image2">
         <img
           src="../assets/images/photoCopie.jpg"
@@ -74,15 +148,183 @@
         <div class="titre">A PROPOS</div>
         <div class="sous-titre">ZOÉ BERTRAND ART-THERAPEUTE</div>
         <div class="texte">
-          {{ texte1 }}
+          <p>blabla</p>
         </div>
       </div>
 
       <div>blalba</div>
+    </div> -->
+  </div>
+
+  <div *ngIf="isArtTherapie" class="apropos-fond">
+    <div class="titre text-style">l'art-therapie</div>
+    <div class="sous-titre text-style">
+      <span class="color-sous-titre">Qu'est ce que c'est ?</span><br /><br />
+    </div>
+
+    <div>
+      <span
+        >L’art-thérapie occupe une place significative en intégrant la création
+        artistique dans le processus de guérison et d’exploration personnelle.
+        Elle offre une voie alternative lorsque les mots échappent et que les
+        émotions sont difficiles à exprimer, permettant ainsi de communiquer des
+        souffrances qui sont parfois trop complexes pour être verbalisées,
+        tandis que l’inconscient joue un rôle majeur dans ce processus.</span
+      >
+    </div>
+    <br />
+
+    <div>
+      <span
+        >Ici, vos œuvres naissent à partir de vos ressentis, mettant en avant le
+        processus créatif au-delà du talent artistique. Vos créations deviennent
+        des outils thérapeutiques, où l’accent est mis sur l’expression plutôt
+        que sur le résultat esthétique. Cela peut prendre différentes formes, et
+        les supports utilisés peuvent être nombreux : la peinture, le dessin, le
+        modelage, l’écriture, la danse, la musique, et bien d’autres procédés
+        encore.</span
+      >
+    </div>
+    <br />
+
+    <div>
+      <span
+        >Grâce à cette approche, vous pourrez explorer les profondeurs de votre
+        psyché, et peut-être découvrir des sentiments enfouis et des aspects
+        inexplorés. Ce cheminement, qui opère comme un processus de
+        transformation, met l’accent sur l’expression libre des émotions et aide
+        à la sublimation de la souffrance ressentie. L’art-thérapeute agit comme
+        un guide pour vous aider à comprendre et à surmonter vos problèmes
+        personnels le plus sereinement possible.</span
+      >
+    </div>
+    <br />
+
+    <div class="ppp">
+      <div class="ppp1">
+        <span><b>Pour qui ?</b></span>
+        <span
+          >Tout d’abord, pour toute personne désireuse de venir pratiquer
+          l’art-thérapie, puisqu’aucune compétence artistique n’est requise pour
+          participer !<br /><br />
+          <b
+            >- Les enfants, les adolescents, les adultes, les personnes âgées
+            …</b
+          ><br />
+          L'art-thérapie est une pratique qui s'adresse et s'adapte à tous les
+          âges.<br /><br />
+          <b>- Toute personne qui souhaite atteindre un état de mieux-être.</b
+          ><br />
+          Que vous ressentiez une souffrance psychologique persistante,
+          traversiez une période difficile, ou aspiriez simplement à vous
+          épanouir davantage en bénéficiant d’un soutien dans votre quête
+          d’évolution personnelle.</span
+        >
+      </div>
+      <div class="ppp1">
+        <span><b>Pour quoi ?</b></span>
+        <span>
+          Grâce à ses techniques variées, au travers des ateliers, dans un
+          espace sécurisé et créatif, l’art-thérapie peut aider, entre autres, à
+          : <br />
+          - Relancer sa créativité<br />
+          - Réduire l’angoisse, l’anxiété et le stress<br />
+          - Apprivoiser ses peurs<br />
+          - Favoriser la communication<br />
+          - Gérer ses émotions<br />
+          - Apprendre à lâcher prise<br />
+          - Renforcer son estime de soi … Confiance en soi, affirmation de soi,
+          amour de soi<br />
+          - Débloquer des conflits<br />
+          - Soulager la souffrance<br />
+          - Renouer le lien avec les autres<br />
+          - Retrouver le plaisir<br />
+          - Redonner du sens à sa vie
+        </span>
+      </div>
+      <div class="ppp1">
+        <span><b>Comment ?</b></span>
+        <span
+          >En mettant en couleurs et en formes vos pensées, vos émotions et vos
+          expériences, vous pourrez découvrir de nouveaux aspects de vous-même,
+          développer votre créativité et trouver des moyens uniques de vous
+          exprimer et de vous comprendre !<br /><br />
+          Les ateliers vous encouragent à vous explorer, afin de remodeler
+          progressivement la perception que vous avez de vous-même. Cette
+          démarche de découverte de soi se déroule à votre rythme, avec pour
+          objectif une transformation positive.</span
+        >
+      </div>
+    </div>
+  </div>
+  <br />
+
+  <div *ngIf="isConsultations" class="apropos-fond">
+    <div class="titre text-style">Consultations</div>
+    <br />
+    <div>
+      <span
+        >Dans mes ateliers, on cherche avant tout à se libérer de ses tracas
+        quotidiens, de son anxiété et de ses pensées négatives, en cherchant à
+        vivre pleinement l’instant présent !</span
+      ><br /><br />
+      <span
+        >Je vous propose différents types de consultation et d’intervention pour
+        vous accompagner dans ce cheminement.</span
+      >
+    </div>
+    <br />
+
+    <div class="ppp">
+      <div class="ppp1">
+        <span class="text-style">Consultation Individutelles</span>
+        <span
+          >Séances en visioconférence ou à domicile. A partir de mi-mai, nous
+          pourrons également organiser des ateliers en présentiel à
+          Castanet-Tolosan.</span
+        >
+      </div>
+      <div class="ppp1">
+        <span class="text-style">Ateliers collectifs</span>
+        <span
+          >À Toulouse et dans ses environs, en présentiel, ou en
+          visioconférence, je propose des ateliers sur différents thèmes.</span
+        >
+        <button>Programme ateliers collectifs</button>
+      </div>
+      <div class="ppp1">
+        <span class="text-style">intervention en structure</span>
+        <span
+          >Je suis disponible à Toulouse et dans ses environs, m’adaptant à
+          différents environnements et contextes pour intervenir dans des
+          structures telles que les EHPAD, les maisons de retraite, les écoles,
+          écoles spécialisées et centres éducatifs, les établissements de soins
+          de santé mentale, les centres avec programme de réadaptation,
+          etc.</span
+        >
+      </div>
+    </div>
+
+    <div>
+      <br />
+      <span>
+        N'hésitez pas à me faire part de votre demande et à me contacter pour
+        toute information complémentaire, notamment concernant les tarifs et la
+        durée des consultations, qui dépendent du cadre et de vos besoins
+        spécifiques. <br />
+        N’hésitez pas également à venir me poser toutes vos questions
+      </span>
     </div>
   </div>
 
-  <div *ngIf="isArtTherapie" class="apropos-fond">isArtTherapie</div>
-  <div *ngIf="isConsultations" class="apropos-fond">isConsultations</div>
-  <div *ngIf="isContact" class="apropos-fond">isContact</div>
+  <div *ngIf="isContact" class="apropos-fond">
+    <div class="titre text-style">Contact</div>
+    <br />
+    <div>
+      <span>Zoé Bertrand</span><br />
+      <span>Art-thérapeute</span><br />
+      <span>0638143799</span><br />
+      <span>zb.artherapie@gmail.com</span><br />
+    </div>
+  </div>
 </div>
