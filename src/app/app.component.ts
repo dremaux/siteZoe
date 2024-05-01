@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   isAPropos:boolean = false;
-  isArtTherapie:boolean = false;
+  isArtTherapie:boolean = true;
   isConsultations:boolean = false;
-  isContact:boolean = true;
+  isContact:boolean = false;
   isTouchDevice?: boolean;
 
 
