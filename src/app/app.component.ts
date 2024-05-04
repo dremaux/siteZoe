@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     console.log(this.isTouchDevice);
 
     if(this.isTouchDevice == true){
-      this.isAPropos = true;
+    this.isAPropos = true;
     this.isArtTherapie = true;
     this.isConsultations = true;
     this.isContact = true;

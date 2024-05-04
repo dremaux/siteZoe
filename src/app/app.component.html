@@ -1,12 +1,14 @@
 <div class="navbar-container">
   <div class="navbar-left">
-    <span [ngClass]="isTouchDevice == true ? 'new' : ''"
-      >Zoé BERTRAND - ART-THERAPEUTE</span
+    <span
+      [ngClass]="isTouchDevice == true ? 'new' : ''"
+      class="text-style mega-titre"
+      >Zoé BERTRAND<span class="color-sous-titre"> - ART-THERAPEUTE</span></span
     >
   </div>
   <div class="navbar-right" *ngIf="!isTouchDevice">
     <div
-      class="bouton-nav"
+      class="bouton-nav text-style-roboto"
       [ngClass]="isAPropos == true ? 'select-bottom' : ''"
       (click)="navigateAPropos()"
     >
@@ -14,7 +16,7 @@
     </div>
     <span>|</span>
     <div
-      class="bouton-nav"
+      class="bouton-nav text-style-roboto"
       [ngClass]="isArtTherapie == true ? 'select-bottom' : ''"
       (click)="navigateArtTherapie()"
     >
@@ -22,7 +24,7 @@
     </div>
     <span>|</span>
     <div
-      class="bouton-nav"
+      class="bouton-nav text-style-roboto"
       [ngClass]="isConsultations == true ? 'select-bottom' : ''"
       (click)="navigateConsultations()"
     >
@@ -30,7 +32,7 @@
     </div>
     <span>|</span>
     <div
-      class="bouton-nav"
+      class="bouton-nav text-style-roboto"
       [ngClass]="isContact == true ? 'select-bottom' : ''"
       (click)="navigateContact()"
     >
@@ -51,13 +53,13 @@
           />
         </div>
         <div class="zone-texte">
-          <div class="titre text-style">A PROPOS</div>
+          <div class="titre text-style" style="display: flex; justify-content: center;">A PROPOS</div>
           <div class="sous-titre text-style">
             <span>ZOÉ BERTRAND</span><br />
             <span class="color-sous-titre">ART-THERAPEUTE</span>
           </div>
           <div class="texte">
-            <span class="texte-propos1"
+            <span class="texte-propos1 text-style-roboto"
               >Depuis mon plus jeune âge, j’ai été plongée dans un environnement
               artistique, ce qui m’a encouragée à explorer naturellement et à
               apprécier une variété de médiums. Que ce soit l’écriture, le
@@ -72,7 +74,7 @@
       </div>
 
       <div class="espace-div">
-        <span class="texte-propos2"
+        <span class="texte-propos2 text-style-roboto"
           >Aujourd’hui formée et diplômée dans les arts appliqués, et certifiée
           en artthérapie, j’ai fait de cette passion mon métier, consciente de
           l’impact profond que l’art peut avoir sur le psychisme. Ayant toujours
@@ -86,7 +88,7 @@
       </div>
 
       <div class="espace-div">
-        <span class="texte-propos3"
+        <span class="texte-propos3 text-style-roboto"
           >En tant qu’art-thérapeute, je m’engage à vous accompagner, à vous
           guider, et à vous soutenir avec respect et bienveillance dans votre
           cheminement personnel. Ma mission est de vous encourager à explorer
@@ -96,13 +98,17 @@
       </div>
 
       <div class="espace-div">
-        <span class="">PARCOURS</span><br /><br />
+        <span class="text-style-roboto"><b>PARCOURS</b></span
+        ><br /><br />
 
-        <span class="">2024</span><br />
-        <span class="">Certification d’art-thérapie.</span><br /><br />
+        <span class="text-style-roboto"><b>2024</b></span
+        ><br />
+        <span class="text-style-roboto">Certification d’art-thérapie.</span
+        ><br /><br />
 
-        <span class="">2023</span><br />
-        <span class=""
+        <span class="text-style-roboto"><b>2023</b></span
+        ><br />
+        <span class="text-style-roboto"
           >Assistante art-thérapeute à la clinique psychiatrique, Maison de
           Santé Mailhol dans le cadre d’un stage.<br />
           - Accompagnement de patients dans l’atelier.<br />
@@ -112,8 +118,9 @@
           de jour.<br /><br />
         </span>
 
-        <span class="">Depuis 2021</span><br />
-        <span class=""
+        <span class="text-style-roboto"><b>Depuis 2021</b></span
+        ><br />
+        <span class="text-style-roboto"
           >Animatrice et AVL (Accompagnante de vie et de loisirs), sur les temps
           périscolaires.<br />
           - Accompagnement d’un enfant en situation de handicap dans diverses
@@ -122,16 +129,23 @@
           d’enfants.<br /><br />
         </span>
 
-        <span class="">2020</span><br />
-        <span class=""
+        <span class="text-style-roboto"><b>2020</b></span
+        ><br />
+        <span class="text-style-roboto"
           >Licence d’Arts, parcours Design, Prospective et Société.<br /><br
         /></span>
 
-        <span class="">2018</span><br />
-        <span class="">BTS en Design d’espace<br /><br /></span>
+        <span class="text-style-roboto"><b>2018</b></span
+        ><br />
+        <span class="text-style-roboto"
+          >BTS en Design d’espace<br /><br
+        /></span>
 
-        <span class="">2016</span><br />
-        <span class="">Mise à niveau en arts appliqués<br /><br /></span>
+        <span class="text-style-roboto"><b>2016</b></span
+        ><br />
+        <span class="text-style-roboto"
+          >Mise à niveau en arts appliqués<br /><br
+        /></span>
       </div>
     </div>
 
@@ -157,13 +171,13 @@
   </div>
 
   <div *ngIf="isArtTherapie" class="apropos-fond">
-    <div class="titre text-style">l'art-therapie</div>
+    <div class="titre text-style" style="display: flex; justify-content: center;">l'art-therapie</div>
     <div class="sous-titre text-style">
-      <span class="color-sous-titre">Qu'est ce que c'est ?</span><br /><br />
+      <span class="color-sous-titre" style="display: flex; justify-content: center;">Qu'est ce que c'est ?</span><br /><br />
     </div>
 
     <div>
-      <span
+      <span class="text-style-roboto"
         >L’art-thérapie occupe une place significative en intégrant la création
         artistique dans le processus de guérison et d’exploration personnelle.
         Elle offre une voie alternative lorsque les mots échappent et que les
@@ -175,7 +189,7 @@
     <br />
 
     <div>
-      <span
+      <span class="text-style-roboto"
         >Ici, vos œuvres naissent à partir de vos ressentis, mettant en avant le
         processus créatif au-delà du talent artistique. Vos créations deviennent
         des outils thérapeutiques, où l’accent est mis sur l’expression plutôt
@@ -188,7 +202,7 @@
     <br />
 
     <div>
-      <span
+      <span class="text-style-roboto"
         >Grâce à cette approche, vous pourrez explorer les profondeurs de votre
         psyché, et peut-être découvrir des sentiments enfouis et des aspects
         inexplorés. Ce cheminement, qui opère comme un processus de
@@ -202,16 +216,24 @@
 
     <div>
       <div class="pppi">
-        <div class="pppi1"><img src="../assets/images/Photo-AT1.jpg" alt=""></div>
-        <div class="pppi1"><img src="../assets/images/Photo-AT2.jpg" alt=""></div>
-        <div class="pppi1"><img src="../assets/images/Photo-AT3.jpg" alt=""></div>
+        <div class="pppi1">
+          <img src="../assets/images/Photo-AT1.jpg" alt="" />
+        </div>
+        <div class="pppi1">
+          <img src="../assets/images/Photo-AT2.jpg" alt="" />
+        </div>
+        <div class="pppi1">
+          <img src="../assets/images/Photo-AT3.jpg" alt="" />
+        </div>
       </div>
-    </div><br>
+    </div>
+    <br />
+    <br />
 
     <div class="ppp">
       <div class="ppp1">
-        <span><b>Pour qui ?</b></span>
-        <span
+        <span class="text-style" style="font-size: 25px; display: flex; justify-content: center;"><b>Pour qui ?</b></span><br>
+        <span class="text-style-roboto"
           >Tout d’abord, pour toute personne désireuse de venir pratiquer
           l’art-thérapie, puisqu’aucune compétence artistique n’est requise pour
           participer !<br /><br />
@@ -230,8 +252,8 @@
         >
       </div>
       <div class="ppp1">
-        <span><b>Pour quoi ?</b></span>
-        <span>
+        <span class="text-style" style="font-size: 25px; display: flex; justify-content: center;"><b>Pour quoi ?</b></span><br>
+        <span class="text-style-roboto">
           Grâce à ses techniques variées, au travers des ateliers, dans un
           espace sécurisé et créatif, l’art-thérapie peut aider, entre autres, à
           : <br />
@@ -251,8 +273,8 @@
         </span>
       </div>
       <div class="ppp1">
-        <span><b>Comment ?</b></span>
-        <span
+        <span class="text-style" style="font-size: 25px; display: flex; justify-content: center;"><b>Comment ?</b></span><br>
+        <span class="text-style-roboto"
           >En mettant en couleurs et en formes vos pensées, vos émotions et vos
           expériences, vous pourrez découvrir de nouveaux aspects de vous-même,
           développer votre créativité et trouver des moyens uniques de vous
@@ -265,44 +287,56 @@
       </div>
     </div>
   </div>
-  <br />
 
   <div *ngIf="isConsultations" class="apropos-fond">
-    <div class="titre text-style">Consultations</div>
+    <div class="titre text-style" style="display: flex; justify-content: center;">Consultations</div>
     <br />
     <div>
-      <span
+      <span class="text-style-roboto"
         >Dans mes ateliers, on cherche avant tout à se libérer de ses tracas
         quotidiens, de son anxiété et de ses pensées négatives, en cherchant à
         vivre pleinement l’instant présent !</span
       ><br /><br />
-      <span
+      <span class="text-style-roboto"
         >Je vous propose différents types de consultation et d’intervention pour
         vous accompagner dans ce cheminement.</span
       >
     </div>
     <br />
+    <br />
+    <br />
 
     <div class="ppp">
       <div class="ppp1">
-        <span class="text-style">Consultation Individutelles</span>
-        <span
+        <span class="text-style" style="font-size: 25px; display: flex; justify-content: center;"
+          ><b>Consultation Individutelles</b></span
+        >
+        <span class="text-style-roboto"
           >Séances en visioconférence ou à domicile. A partir de mi-mai, nous
           pourrons également organiser des ateliers en présentiel à
           Castanet-Tolosan.</span
         >
       </div>
       <div class="ppp1">
-        <span class="text-style">Ateliers collectifs</span>
-        <span
+        <span class="text-style" style="font-size: 25px; display: flex; justify-content: center;"
+          ><b>Ateliers collectifs</b></span
+        >
+        <span class="text-style-roboto"
           >À Toulouse et dans ses environs, en présentiel, ou en
           visioconférence, je propose des ateliers sur différents thèmes.</span
         >
-        <button>Programme ateliers collectifs</button>
+        <br>
+        <div class="btn-emplacement">
+          <button class="btn-consultation">
+            Programme ateliers collectifs
+          </button>
+        </div>
       </div>
       <div class="ppp1">
-        <span class="text-style">intervention en structure</span>
-        <span
+        <span class="text-style" style="font-size: 25px; display: flex; justify-content: center;"
+          ><b>intervention en structure</b></span
+        >
+        <span class="text-style-roboto"
           >Je suis disponible à Toulouse et dans ses environs, m’adaptant à
           différents environnements et contextes pour intervenir dans des
           structures telles que les EHPAD, les maisons de retraite, les écoles,
@@ -315,7 +349,7 @@
 
     <div>
       <br />
-      <span>
+      <span class="text-style-roboto">
         N'hésitez pas à me faire part de votre demande et à me contacter pour
         toute information complémentaire, notamment concernant les tarifs et la
         durée des consultations, qui dépendent du cadre et de vos besoins
@@ -326,13 +360,13 @@
   </div>
 
   <div *ngIf="isContact" class="apropos-fond">
-    <div class="titre text-style">Contact</div>
+    <div class="titre text-style" style="display: flex; justify-content: center;">Contact</div>
     <br />
     <div>
-      <span>Zoé Bertrand</span><br />
-      <span>Art-thérapeute</span><br />
-      <span>0638143799</span><br />
-      <span>zb.artherapie@gmail.com</span><br />
+      <span class="text-style-roboto">Zoé Bertrand</span><br />
+      <span class="text-style-roboto">Art-thérapeute</span><br />
+      <span class="text-style-roboto">0638143799</span><br />
+      <span class="text-style-roboto">zb.artherapie@gmail.com</span><br />
     </div>
   </div>
 </div>

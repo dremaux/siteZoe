@@ -42,14 +42,13 @@
 }
 
 .fond {
+  margin: 0;
+  padding: 0;
   background-size: cover;
-  background-position: center;
   background-image: url("../assets/images/fond3.jpg");
-  position: absolute;
-
+  background-attachment: fixed; /* Ajout de cette ligne */
   width: 100%;
   height: 100%;
-
 }
 
 .div-fond {
@@ -59,10 +58,14 @@
 .apropos-fond {
   display: flex;
   flex-direction: column;
-  background-color: rgb(221, 237, 254);
-  margin: 5px;
+  background-color: rgb(221, 237, 254,0.75);
+  
   padding: 1%;
   border-radius: 5px;
+  padding-bottom: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 50px;
 }
 
 .flex-dir-img {
@@ -86,10 +89,10 @@
   flex-direction: column;
 }
 
-
 .image {
   display: flex;
-  max-width: 300px;
+  width: 300px;
+  height: 300px;
   border-radius: 20px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Réduire l'ombre */
 }
@@ -101,9 +104,8 @@
 }
 
 .image-pp {
-  display: flex;
-  margin: auto;
-  width: 100%;
+  width: 300px;
+  height: 300px;
   border-radius: 20px;
 }
 
@@ -120,21 +122,24 @@
 }
 
 .zone-texte {
-  border-left: 1px solid black;
+  display: flex;
+  flex-direction: column;
   margin-left: 2%;
-  
+
   padding-left: 2%;
   padding-right: 2%;
 }
 
-
-
 .titre {
- font-size: 50px;
+  font-size: 45px;
 }
 
 .sous-titre {
-  font-size: 25px;
+  font-size: 30px;
+}
+
+.mega-titre {
+  font-size: 30px;
 }
 
 .texte {
@@ -150,15 +155,15 @@
 }
 
 .texte-propos1 {
-  line-height: 1.5; 
+  line-height: 1.5;
 }
 
 .texte-propos2 {
-  line-height: 1.5; 
+  line-height: 1.5;
 }
 
 .texte-propos3 {
-  line-height: 1.5; 
+  line-height: 1.5;
 }
 
 .ppp {
@@ -176,7 +181,6 @@
   flex-direction: column;
 }
 
-
 .pppi {
   display: flex;
   width: 100%;
@@ -188,6 +192,7 @@
   margin: 0 2%;
   display: flex;
   justify-content: center;
+  height: 300px;
 }
 
 .pppi1 img {
@@ -196,3 +201,19 @@
   height: auto;
 }
 
+.btn-consultation {
+  display: flex;
+  background-color: #5d538a;
+  color: white;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.btn-emplacement {
+  display: flex;
+  justify-content: center;
+}
