@@ -53,7 +53,13 @@
           />
         </div>
         <div class="zone-texte">
-          <div class="titre text-style" style="display: flex; justify-content: center;">A PROPOS</div>
+          <div
+            class="titre text-style"
+            style="display: flex;"
+          >
+            A PROPOS
+          </div>
+          <br><br>
           <div class="sous-titre text-style">
             <span>ZOÉ BERTRAND</span><br />
             <span class="color-sous-titre">ART-THERAPEUTE</span>
@@ -96,9 +102,9 @@
           aider à atteindre un état de mieux-être.</span
         >
       </div>
-
+      <br><br>
       <div class="espace-div">
-        <span class="text-style-roboto"><b>PARCOURS</b></span
+        <span class="text-style" style="font-size: 30px;">PARCOURS</span
         ><br /><br />
 
         <span class="text-style-roboto"><b>2024</b></span
@@ -171,9 +177,11 @@
   </div>
 
   <div *ngIf="isArtTherapie" class="apropos-fond">
-    <div class="titre text-style" style="display: flex; justify-content: center;">l'art-therapie</div>
+    <div class="titre text-style" style="display: flex">l'art-therapie</div>
     <div class="sous-titre text-style">
-      <span class="color-sous-titre" style="display: flex; justify-content: center;">Qu'est ce que c'est ?</span><br /><br />
+      <span class="color-sous-titre" style="display: flex"
+        >Qu'est ce que c'est ?</span
+      ><br /><br />
     </div>
 
     <div>
@@ -213,6 +221,10 @@
       >
     </div>
     <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
     <div>
       <div class="pppi">
@@ -229,10 +241,15 @@
     </div>
     <br />
     <br />
+    <br />
+    <br />
+    <br />
 
     <div class="ppp">
       <div class="ppp1">
-        <span class="text-style" style="font-size: 25px; display: flex; justify-content: center;"><b>Pour qui ?</b></span><br>
+        <span class="text-style" style="font-size: 25px; display: flex"
+          ><b>Pour qui ?</b></span
+        ><br />
         <span class="text-style-roboto"
           >Tout d’abord, pour toute personne désireuse de venir pratiquer
           l’art-thérapie, puisqu’aucune compétence artistique n’est requise pour
@@ -252,11 +269,13 @@
         >
       </div>
       <div class="ppp1">
-        <span class="text-style" style="font-size: 25px; display: flex; justify-content: center;"><b>Pour quoi ?</b></span><br>
+        <span class="text-style" style="font-size: 25px; display: flex"
+          ><b>Pour quoi ?</b></span
+        ><br />
         <span class="text-style-roboto">
           Grâce à ses techniques variées, au travers des ateliers, dans un
           espace sécurisé et créatif, l’art-thérapie peut aider, entre autres, à
-          : <br />
+          : <br /><br />
           - Relancer sa créativité<br />
           - Réduire l’angoisse, l’anxiété et le stress<br />
           - Apprivoiser ses peurs<br />
@@ -273,7 +292,9 @@
         </span>
       </div>
       <div class="ppp1">
-        <span class="text-style" style="font-size: 25px; display: flex; justify-content: center;"><b>Comment ?</b></span><br>
+        <span class="text-style" style="font-size: 25px; display: flex"
+          ><b>Comment ?</b></span
+        ><br />
         <span class="text-style-roboto"
           >En mettant en couleurs et en formes vos pensées, vos émotions et vos
           expériences, vous pourrez découvrir de nouveaux aspects de vous-même,
@@ -289,7 +310,12 @@
   </div>
 
   <div *ngIf="isConsultations" class="apropos-fond">
-    <div class="titre text-style" style="display: flex; justify-content: center;">Consultations</div>
+    <div
+      class="titre text-style"
+      style="display: flex;"
+    >
+      Consultations
+    </div>
     <br />
     <div>
       <span class="text-style-roboto"
@@ -307,10 +333,10 @@
     <br />
 
     <div class="ppp">
-      <div class="ppp1">
-        <span class="text-style" style="font-size: 25px; display: flex; justify-content: center;"
-          ><b>Consultation Individutelles</b></span
-        >
+      <div class="ppp1" style="background-color: white;">
+        <span class="text-style" style="font-size: 30px; display: flex"
+          >Consultation Individutelles</span
+        ><br />
         <span class="text-style-roboto"
           >Séances en visioconférence ou à domicile. A partir de mi-mai, nous
           pourrons également organiser des ateliers en présentiel à
@@ -318,14 +344,14 @@
         >
       </div>
       <div class="ppp1">
-        <span class="text-style" style="font-size: 25px; display: flex; justify-content: center;"
-          ><b>Ateliers collectifs</b></span
-        >
+        <span class="text-style" style="font-size: 30px; display: flex"
+          >Ateliers collectifs</span
+        ><br />
         <span class="text-style-roboto"
           >À Toulouse et dans ses environs, en présentiel, ou en
           visioconférence, je propose des ateliers sur différents thèmes.</span
         >
-        <br>
+        <br />
         <div class="btn-emplacement">
           <button class="btn-consultation">
             Programme ateliers collectifs
@@ -333,9 +359,9 @@
         </div>
       </div>
       <div class="ppp1">
-        <span class="text-style" style="font-size: 25px; display: flex; justify-content: center;"
-          ><b>intervention en structure</b></span
-        >
+        <span class="text-style" style="font-size: 30px; display: flex"
+          >intervention en structure</span
+        ><br />
         <span class="text-style-roboto"
           >Je suis disponible à Toulouse et dans ses environs, m’adaptant à
           différents environnements et contextes pour intervenir dans des
@@ -348,19 +374,17 @@
     </div>
 
     <div>
-      <br />
+      <br /><br /><br />
       <span class="text-style-roboto">
-        N'hésitez pas à me faire part de votre demande et à me contacter pour
-        toute information complémentaire, notamment concernant les tarifs et la
-        durée des consultations, qui dépendent du cadre et de vos besoins
-        spécifiques. <br />
-        N’hésitez pas également à venir me poser toutes vos questions
+        N’hésitez pas également à venir me poser toutes vos questions et
+        interrogations.<br />
+        J’y répondrai avec plaisir et avec toute l’attention nécessaire.
       </span>
     </div>
   </div>
 
   <div *ngIf="isContact" class="apropos-fond">
-    <div class="titre text-style" style="display: flex; justify-content: center;">Contact</div>
+    <div class="titre text-style" style="display: flex">Contact</div>
     <br />
     <div>
       <span class="text-style-roboto">Zoé Bertrand</span><br />
