@@ -21,7 +21,7 @@
       A PROPOS
     </div>
     <span>|</span>
-    
+
     <!-- <div
       class="bouton-nav text-style-roboto"
       [ngClass]="isArtTherapie == true ? 'select-bottom' : ''"
@@ -37,7 +37,6 @@
       </div>
     </div> -->
 
-
     <!-- <div class="bouton-nav text-style-roboto" [ngClass]="isArtTherapie == true ? 'select-bottom' : ''">
       L'ART-THERAPIE
       <div class="dropdown-container" *ngIf="dropdownVisible">
@@ -46,6 +45,11 @@
       </div>
     </div> -->
 
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu class="mat-menu-content" #menu="matMenu">
+  <button  mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
 
     <span>|</span>
     <div
@@ -486,7 +490,7 @@
         <img
           src="../assets/images/icon-tel.jpg"
           alt=""
-          style="height: 40px; width: 40px; margin-right: 10px;"
+          style="height: 40px; width: 40px; margin-right: 10px"
         />
         <span class="font-lato" style="font-size: 20px"
           ><b> 06 38 14 37 99</b></span
@@ -497,7 +501,7 @@
         <img
           src="../assets/images/icon-email.jpg"
           alt=""
-          style="height: 40px; width: 40px; margin-right: 10px;"
+          style="height: 40px; width: 40px; margin-right: 10px"
         />
         <span class="font-lato" style="font-size: 20px"
           ><b>zb.artherapie@gmail.com</b></span
@@ -509,8 +513,8 @@
 
   <div
     *ngIf="isPP"
-    class="apropos-fond flex"
-    style="padding-left: 7%; padding-right: 7%"
+    class="apropos-fond flex img-fond-dessin"
+    style="padding-left: 7%; padding-right: 7%;"
   >
     <div>
       <span
