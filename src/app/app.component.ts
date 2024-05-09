@@ -7,11 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  isAPropos:boolean = false;
-  isArtTherapie:boolean = true;
+
+  isAPropos:boolean = true;
+  isArtTherapie:boolean = false;
   isConsultations:boolean = false;
   isContact:boolean = false;
+  isPP:boolean = false;
+  isProgramme:boolean = false;
+
   isTouchDevice?: boolean;
+  dropdownVisible: boolean = false;
+
+  
 
 
   ngOnInit() {
@@ -23,14 +30,20 @@ export class AppComponent implements OnInit {
     this.isArtTherapie = true;
     this.isConsultations = true;
     this.isContact = true;
+    this.isProgramme = false;
     }
   }
+
+  
 
   navigateAPropos(): void {
     this.isAPropos = true;
     this.isArtTherapie = false;
     this.isConsultations = false;
     this.isContact = false;
+    this.isPP = false;
+    this.isProgramme = false;
+    this.dropdownVisible = false;
   }
 
   navigateArtTherapie(): void {
@@ -38,13 +51,35 @@ export class AppComponent implements OnInit {
     this.isArtTherapie = true;
     this.isConsultations = false;
     this.isContact = false;
+    this.isPP = false;
+    this.isProgramme = false;
+    this.dropdownVisible = false;
   }
+
+  navigateArtTherapie2(): void {
+    this.isAPropos = false;
+    this.isArtTherapie = true;
+    this.isConsultations = false;
+    this.isContact = false;
+    this.isPP = false;
+    this.isProgramme = false;
+    this.dropdownVisible = false;
+  
+    // Attendre 1 seconde puis exécuter la méthode scrollToBottom()
+    setTimeout(() => {
+      this.scrollToBottom();
+    }, 100); // 1000 millisecondes équivalent à 1 seconde
+  }
+  
 
   navigateConsultations(): void {
     this.isAPropos = false;
     this.isArtTherapie = false;
     this.isConsultations = true;
     this.isContact = false;
+    this.isPP = false;
+    this.isProgramme = false;
+    this.dropdownVisible = false;
   }
 
   navigateContact(): void {
@@ -52,7 +87,42 @@ export class AppComponent implements OnInit {
     this.isArtTherapie = false;
     this.isConsultations = false;
     this.isContact = true;
+    this.isPP = false;
+    this.isProgramme = false;
+    this.dropdownVisible = false;
   }
+
+  navigatePP(): void {
+    this.isAPropos = false;
+    this.isArtTherapie = false;
+    this.isConsultations = false;
+    this.isContact = false;
+    this.isPP = true;
+    this.isProgramme = false;
+    this.dropdownVisible = false;
+  }
+
+  navigateProgramme(): void {
+    this.isAPropos = false;
+    this.isArtTherapie = false;
+    this.isConsultations = false;
+    this.isContact = false;
+    this.isPP = false;
+    this.isProgramme = true;
+    this.dropdownVisible = false;
+  }
+
+  scrollToBottom(): void {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+  }
+
+
+  
+
+
 
 
 }
