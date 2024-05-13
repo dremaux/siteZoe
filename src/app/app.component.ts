@@ -10,11 +10,11 @@ import {MatButtonModule} from '@angular/material/button';
 export class AppComponent implements OnInit {
 
 
-  isAPropos:boolean = true;
+  isAPropos:boolean = false;
   isArtTherapie:boolean = false;
   isConsultations:boolean = false;
   isContact:boolean = false;
-  isPP:boolean = false;
+  isPP:boolean = true;
   isProgramme:boolean = false;
 
   isTouchDevice?: boolean;
@@ -56,6 +56,10 @@ export class AppComponent implements OnInit {
     this.isPP = false;
     this.isProgramme = false;
     this.dropdownVisible = false;
+
+    setTimeout(() => {
+      this.scrollToTop();
+    }, 100);
   }
 
   navigateArtTherapie2(): void {
@@ -120,6 +124,14 @@ export class AppComponent implements OnInit {
       behavior: 'smooth'
     });
   }
+
+  scrollToTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+  
 
 
   
