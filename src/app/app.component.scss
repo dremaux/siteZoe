@@ -36,11 +36,11 @@
 }
 
 .bouton-nav:hover {
-  background-color: rgb(172, 236, 255);
+  background-color: #edf1f9;
 }
 
 .select-bottom {
-  background-color: rgb(172, 236, 255);
+  background-color: #edf1f9;
 }
 
 .fond {
@@ -60,7 +60,7 @@
 .apropos-fond {
   display: flex;
   flex-direction: column;
-  background-color: rgba(242, 238, 253, 0.75);
+  background-color: rgba(237,241,249, 0.75);
 
   padding: 1%;
   border-radius: 5px;
@@ -78,15 +78,15 @@
   padding: 1%;
   border-radius: 5px;
   padding-bottom: 150px;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 23%;
+  margin-right: 23%;
   padding-top: 150px;
 }
 
 .img-fond-dessin {
   display: flex;
   flex-direction: column;
-  background-image: url("../assets/images/fond3.jpg");
+  background-image: url("../assets/images/fond4.jpg");
   background-size: cover;
   background-attachment: fixed;
 
@@ -154,7 +154,6 @@
   width: 350px;
   height: 350px;
   object-fit: cover;
-  margin-right: 50px;
 }
 
 .image-pp2 {
@@ -195,7 +194,7 @@
 }
 
 .color-sous-titre {
-  color: rgb(152, 152, 152);
+  color: rgb(0, 0, 0);
 }
 
 .espace-div {
@@ -229,6 +228,7 @@
   flex: 1;
   flex-direction: column;
   padding: 2%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Réduire l'ombre */
 }
 
 .pppi {
@@ -253,7 +253,7 @@
 
 .btn-consultation {
   display: flex;
-  background-color: #5d538a;
+  background-color: #463e6b;
   color: white;
   cursor: pointer;
   width: 200px;
@@ -261,6 +261,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  font-family: 'Roboto';
 }
 
 .btn-emplacement {

@@ -1,668 +1,1139 @@
-<div class="navbar-container">
-  <div class="navbar-left">
-    <span
-      [ngClass]="isTouchDevice == true ? 'new' : ''"
-      class="text-style mega-titre"
-      (click)="navigatePP()"
-      style="cursor: pointer; margin-left: 25%"
-      >Zoé BERTRAND<span
-        class="color-sous-titre font-lato"
-        style="font-size: 25px"
-        ><b> - ART-THERAPEUTE</b></span
-      ></span
-    >
+<div *ngIf="!isTouchDevice">
+  <div class="navbar-container">
+    <div class="navbar-left">
+      <span
+        class="text-style mega-titre"
+        (click)="navigatePP()"
+        style="cursor: pointer; margin-left: 25%"
+        >Zoé BERTRAND<span
+          class="color-sous-titre font-lato"
+          style="font-size: 25px"
+          ><b> - ART-THERAPEUTE</b></span
+        ></span
+      >
+    </div>
+    <div class="navbar-right" style="margin-right: 10%">
+      <div
+        class="bouton-nav text-style-roboto"
+        [ngClass]="isAPropos == true ? 'select-bottom' : ''"
+        (click)="navigateAPropos()"
+      >
+        A PROPOS
+      </div>
+      <button
+        mat-button
+        [matMenuTriggerFor]="menu"
+        [ngClass]="isArtTherapie == true ? 'select-bottom' : ''"
+        class="bouton-nav text-style-roboto"
+        style="border: none"
+      >
+        L'ART-THERAPIE
+      </button>
+      <mat-menu class="mat-menu-content" #menu="matMenu">
+        <button mat-menu-item (click)="navigateArtTherapie()">
+          Qu'est ce que c'est ?
+        </button>
+        <button mat-menu-item (click)="navigateArtTherapie2()">
+          Pour qui ? Pour quoi ? Comment ?
+        </button>
+      </mat-menu>
+
+      <div
+        class="bouton-nav text-style-roboto"
+        [ngClass]="isConsultations == true ? 'select-bottom' : ''"
+        (click)="navigateConsultations()"
+      >
+        CONSULTATION
+      </div>
+      <div
+        class="bouton-nav text-style-roboto"
+        [ngClass]="isContact == true ? 'select-bottom' : ''"
+        (click)="navigateContact()"
+      >
+        CONTACT
+      </div>
+    </div>
   </div>
-  <div class="navbar-right" *ngIf="!isTouchDevice" style="margin-right: 10%">
-    <div
-      class="bouton-nav text-style-roboto"
-      [ngClass]="isAPropos == true ? 'select-bottom' : ''"
-      (click)="navigateAPropos()"
-    >
-      A PROPOS
+
+  <div class="fond">
+    <div *ngIf="isAPropos">
+      <div class="apropos-fond" style="padding-left: 7%; padding-right: 7%">
+        <div class="titre text-style" style="display: flex">A PROPOS</div>
+        <br />
+        <br />
+        <div class="flex-dir-img">
+          <div class="image">
+            <img
+              src="../assets/images/PhotoZoe.jpg"
+              class="image-pp"
+              alt="Ma photo"
+            />
+          </div>
+          <div class="zone-texte">
+            <div class="sous-titre text-style">
+              <span>ZOÉ BERTRAND <br /></span><br />
+              <span class="color-sous-titre font-lato" style="font-size: 25px"
+                ><b>ART-THERAPEUTE</b></span
+              >
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="texte">
+              <span
+                class="texte-propos1 font-lato"
+                style="font-size: 20px; line-height: 1.5"
+                ><b
+                  >Depuis mon plus jeune âge, j’ai été plongée dans un
+                  environnement artistique, ce qui m’a encouragée à explorer
+                  naturellement et à apprécier une variété de médiums. Que ce
+                  soit l’écriture, le dessin, la peinture ou encore la
+                  photographie, toutes ces formes d’expression ont finalement
+                  toujours constitué l’essence de mes centres d’intérêt.
+                  Progressivement, j’ai mis des mots sur ma pratique, et pris
+                  conscience des bienfaits de la création dans ma vie
+                  personnelle.</b
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="espace-div">
+          <span
+            class="texte-propos2 font-lato"
+            style="font-size: 20px; line-height: 1.5"
+            ><b
+              >Aujourd’hui formée et diplômée dans les arts appliqués, et
+              certifiée en art-thérapie, j’ai fait de cette passion mon métier,
+              consciente de l’impact profond que l’art peut avoir sur le
+              psychisme. Ayant toujours eu une grande curiosité pour la
+              psychologie et pour la compréhension du fonctionnement humain,
+              s’est imposé à moi le besoin d’exploiter le côté thérapeutique de
+              l’art en élaborant des protocoles pour aider et soulager à travers
+              lui. À ce jour, je suis pleinement convaincue du potentiel et du
+              pouvoir transformateur que peut apporter l’art dans le processus
+              de guérison.</b
+            ></span
+          >
+        </div>
+
+        <div class="espace-div">
+          <span
+            class="texte-propos3 font-lato"
+            style="font-size: 20px; line-height: 1.5"
+            ><b
+              >En tant qu’art-thérapeute, je m’engage à vous accompagner, à vous
+              guider, et à vous soutenir avec respect et bienveillance dans
+              votre cheminement personnel. Ma mission est de vous encourager à
+              explorer votre monde intérieur à travers l’expression artistique
+              pour vous aider à atteindre un état de mieux-être.</b
+            ></span
+          >
+        </div>
+        <br /><br /><br /><br /><br /><br /><br />
+        <div class="espace-div">
+          <span class="sous-titre text-style">PARCOURS</span><br /><br /><br />
+          <img
+            src="../assets/images/FChrono.JPG"
+            alt=""
+            style="
+              width: 100%;
+              box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Réduire l'ombre */
+            "
+          />
+        </div>
+      </div>
     </div>
 
-    <!-- <div
-      class="bouton-nav text-style-roboto"
-      [ngClass]="isArtTherapie == true ? 'select-bottom' : ''"
-      (click)="toggleDropdown()">
-      L'ART-THERAPIE
-      <div *ngIf="dropdownVisible">
-        <ul>
-          <li (click)="navigateArtTherapie()">Qu'est ce que c'est ?</li>
-          <li (click)="navigateArtTherapie2()">
-            Pour qui ? Pour quoi ? Comment ?
-          </li>
-        </ul>
-      </div>
-    </div> -->
-
-    <!-- <div class="bouton-nav text-style-roboto" [ngClass]="isArtTherapie == true ? 'select-bottom' : ''">
-      L'ART-THERAPIE
-      <div class="dropdown-container" *ngIf="dropdownVisible">
-        <div class="dropdown-item" (click)="navigateArtTherapie()">Qu'est-ce que c'est ?</div>
-        <div class="dropdown-item" (click)="navigateArtTherapie2()">Pour qui ? Pour quoi ? Comment ?</div>
-      </div>
-    </div> -->
-
-    <button
-      mat-button
-      [matMenuTriggerFor]="menu"
-      [ngClass]="isArtTherapie == true ? 'select-bottom' : ''"
-      class="bouton-nav text-style-roboto"
-      style="border: none"
-    >
-      L'ART-THERAPIE
-    </button>
-    <mat-menu class="mat-menu-content" #menu="matMenu">
-      <button mat-menu-item (click)="navigateArtTherapie()">
-        Qu'est ce que c'est ?
-      </button>
-      <button mat-menu-item (click)="navigateArtTherapie2()">
-        Pour qui ? Pour quoi ? Comment ?
-      </button>
-    </mat-menu>
-
     <div
-      class="bouton-nav text-style-roboto"
-      [ngClass]="isConsultations == true ? 'select-bottom' : ''"
-      (click)="navigateConsultations()"
+      *ngIf="isArtTherapie"
+      class="apropos-fond"
+      style="padding-left: 7%; padding-right: 7%"
     >
-      CONSULTATION
+      <div class="titre text-style" style="display: flex">l'art-therapie</div>
+      <br /><br /><br />
+      <div class="sous-titre text-style">
+        <span class="color-sous-titre" style="display: flex"
+          >Qu'est ce que c'est ?</span
+        ><br />
+      </div>
+      <br /><br />
+      <div>
+        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+          ><b
+            >L’art-thérapie occupe une place significative en intégrant la
+            création artistique dans le processus de guérison et d’exploration
+            personnelle. Elle offre une voie alternative lorsque les mots
+            échappent et que les émotions sont difficiles à exprimer, permettant
+            ainsi de communiquer des souffrances qui sont parfois trop complexes
+            pour être verbalisées, tandis que l’inconscient joue un rôle majeur
+            dans ce processus.</b
+          ></span
+        >
+      </div>
+      <br />
+
+      <div>
+        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+          ><b
+            >Ici, vos œuvres naissent à partir de vos ressentis, mettant en
+            avant le processus créatif au-delà du talent artistique. Vos
+            créations deviennent des outils thérapeutiques, où l’accent est mis
+            sur l’expression plutôt que sur le résultat esthétique. Cela peut
+            prendre différentes formes, et les supports utilisés peuvent être
+            nombreux : la peinture, le dessin, le modelage, l’écriture, la
+            danse, la musique, et bien d’autres procédés encore.</b
+          ></span
+        >
+      </div>
+      <br />
+
+      <div>
+        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+          ><b
+            >Grâce à cette approche, vous pourrez explorer les profondeurs de
+            votre psyché, et peut-être découvrir des sentiments enfouis et des
+            aspects inexplorés. Ce cheminement, qui opère comme un processus de
+            transformation, met l’accent sur l’expression libre des émotions et
+            aide à la sublimation de la souffrance ressentie. L’art-thérapeute
+            agit comme un guide pour vous aider à comprendre et à surmonter vos
+            problèmes personnels le plus sereinement possible.</b
+          ></span
+        >
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <div>
+        <div class="pppi">
+          <div class="pppi1">
+            <img src="../assets/images/Photo-AT1.jpg" alt="" />
+          </div>
+          <div class="pppi1">
+            <img src="../assets/images/Photo-AT2.jpg" alt="" />
+          </div>
+          <div class="pppi1">
+            <img src="../assets/images/Photo-AT3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <div class="ppp">
+        <div class="ppp1">
+          <span
+            class="text-style sous-titre"
+            style="display: flex; justify-content: center"
+            >Pour qui ?</span
+          ><br />
+          <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+            ><b
+              >Tout d’abord, pour toute personne désireuse de venir pratiquer
+              l’art-thérapie, puisqu’aucune compétence artistique n’est requise
+              pour participer !<br /><br />
+              - Les enfants, les adolescents, les adultes, les personnes âgées …
+              ><br />
+              L'art-thérapie est une pratique qui s'adresse et s'adapte à tous
+              les âges.<br /><br />
+              - Toute personne qui souhaite atteindre un état de mieux-être.<br />
+              Que vous ressentiez une souffrance psychologique persistante,
+              traversiez une période difficile, ou aspiriez simplement à vous
+              épanouir davantage en bénéficiant d’un soutien dans votre quête
+              d’évolution personnelle.</b
+            ></span
+          >
+        </div>
+        <div class="ppp1">
+          <span
+            class="text-style sous-titre"
+            style="display: flex; justify-content: center"
+            >Pour quoi ?</span
+          ><br />
+          <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+            ><b>
+              Grâce à ses techniques variées, au travers des ateliers, dans un
+              espace sécurisé et créatif, l’art-thérapie peut aider, entre
+              autres, à : <br /><br />
+              - Relancer sa créativité<br />
+              - Réduire l’angoisse, l’anxiété et le stress<br />
+              - Apprivoiser ses peurs<br />
+              - Favoriser la communication<br />
+              - Gérer ses émotions<br />
+              - Apprendre à lâcher prise<br />
+              - Renforcer son estime de soi … Confiance en soi, affirmation de
+              soi, amour de soi<br />
+              - Débloquer des conflits<br />
+              - Soulager la souffrance<br />
+              - Renouer le lien avec les autres<br />
+              - Retrouver le plaisir<br />
+              - Redonner du sens à sa vie</b
+            >
+          </span>
+        </div>
+        <div class="ppp1">
+          <span
+            class="text-style sous-titre"
+            style="display: flex; justify-content: center"
+            >Comment ?</span
+          ><br />
+          <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+            ><b
+              >En mettant en couleurs et en formes vos pensées, vos émotions et
+              vos expériences, vous pourrez découvrir de nouveaux aspects de
+              vous-même, développer votre créativité et trouver des moyens
+              uniques de vous exprimer et de vous comprendre !<br /><br />
+              Les ateliers vous encouragent à vous explorer, afin de remodeler
+              progressivement la perception que vous avez de vous-même. Cette
+              démarche de découverte de soi se déroule à votre rythme, avec pour
+              objectif une transformation positive.</b
+            ></span
+          >
+        </div>
+      </div>
     </div>
+
     <div
-      class="bouton-nav text-style-roboto"
-      [ngClass]="isContact == true ? 'select-bottom' : ''"
-      (click)="navigateContact()"
+      *ngIf="isConsultations"
+      class="apropos-fond"
+      style="padding-left: 7%; padding-right: 7%"
     >
-      CONTACT
+      <div class="titre text-style" style="display: flex">Consultations</div>
+      <br />
+      <br />
+      <br />
+      <div>
+        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+          ><b
+            >Dans mes ateliers, on cherche avant tout à se libérer de ses tracas
+            quotidiens, de son anxiété et de ses pensées négatives, en cherchant
+            à vivre pleinement l’instant présent !</b
+          ></span
+        ><br />
+        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+          ><b
+            >Je vous propose différents types de consultation et d’intervention
+            pour vous accompagner dans ce cheminement.</b
+          ></span
+        >
+      </div>
+      <br />
+      <br />
+      <br />
+
+      <div class="ppp">
+        <div class="ppp1" style="background-color: white; padding: 2%">
+          <span
+            class="text-style"
+            style="font-size: 30px; display: flex; justify-content: center"
+            >Consultations Individutelles</span
+          ><br />
+          <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+            ><b
+              >Séances en visioconférence ou à domicile. <br /><br />Séance en
+              cabinet sur Castanet-Tolosan, tous les vendredis à partir du 19
+              juillet.</b
+            ></span
+          >
+        </div>
+        <div class="ppp1" style="background-color: white; padding: 2%">
+          <span
+            class="text-style"
+            style="font-size: 30px; display: flex; justify-content: center"
+            >Ateliers collectifs</span
+          ><br />
+          <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+            ><b
+              >À Toulouse et dans ses environs, en présentiel, ou en
+              visioconférence, je propose des ateliers sur différents thèmes.</b
+            ></span
+          >
+          <br />
+          <br />
+          <br />
+          <div class="btn-emplacement">
+            <button class="btn-consultation" (click)="navigateProgramme()">
+              Programme <br />ateliers collectifs
+            </button>
+          </div>
+        </div>
+        <div class="ppp1" style="background-color: white; padding: 2%">
+          <span
+            class="text-style"
+            style="font-size: 30px; display: flex; justify-content: center"
+            >intervention en structure</span
+          ><br />
+          <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+            ><b
+              >Je suis disponible à Toulouse et dans ses environs, m’adaptant à
+              différents environnements et contextes pour intervenir dans des
+              structures telles que les EHPAD, les maisons de retraite, les
+              écoles, écoles spécialisées et centres éducatifs, les
+              établissements de soins de santé mentale, les centres avec
+              programme de réadaptation, etc.</b
+            ></span
+          >
+        </div>
+      </div>
+
+      <div>
+        <br /><br /><br />
+        <span class="font-lato" style="font-size: 20px; font-style: italic"
+          ><b>
+            N'hésitez pas à me faire part de votre demande et à me contacter
+            pour toute information complémentaire, notamment concernant les
+            tarifs et la durée des consultations, qui dépendent du cadre et de
+            vos besoins spécifiques.<br /><br
+          /></b>
+        </span>
+        <span class="font-lato" style="font-size: 20px"
+          ><b>
+            N’hésitez pas également à venir me poser toutes vos questions et
+            interrogations.<br />
+            J’y répondrai avec plaisir et avec toute l’attention nécessaire.
+          </b></span
+        >
+      </div>
+    </div>
+
+    <div *ngIf="isContact" class="apropos-fond3">
+      <div
+        style="
+          background-color: rgba(237, 241, 249, 0.75);
+          padding-left: 7%;
+          padding-right: 7%;
+          padding-top: 50px;
+          display: flex;
+          flex-direction: row;
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <div style="flex: 1">
+          <div>
+            <div class="titre text-style" style="display: flex">Contact</div>
+          </div>
+
+          <div style="display: flex; flex-direction: row">
+            <div>
+              <br />
+              <br />
+              <br />
+              <div>
+                <span class="font-lato" style="font-size: 30px"
+                  ><b>Zoé Bertrand</b></span
+                >
+              </div>
+              <br />
+              <div>
+                <span class="font-lato" style="font-size: 25px"
+                  ><b>Art-thérapeute</b></span
+                >
+              </div>
+
+              <br /><br /><br />
+              <div style="display: flex; align-items: center">
+                <img
+                  src="../assets/images/icon-tel.jpg"
+                  alt=""
+                  style="height: 40px; width: 40px; margin-right: 10px"
+                />
+                <span class="font-lato" style="font-size: 20px"
+                  ><b> 06 38 14 37 99</b></span
+                >
+              </div>
+              <br /><br />
+              <div
+                style="display: flex; align-items: center;"
+              >
+                <img
+                  src="../assets/images/icon-email.jpg"
+                  alt=""
+                  style="height: 40px; width: 40px; margin-right: 10px"
+                />
+                <span class="font-lato" style="font-size: 20px"
+                  ><b>zb.artherapie@gmail.com</b></span
+                >
+              </div>
+              <br /><br />
+              <div
+                style="display: flex; align-items: center; padding-bottom: 50px"
+              >
+                <img
+                  src="../assets/images/icon-gps.jpg"
+                  alt=""
+                  style="height: 40px; width: 40px; margin-right: 10px"
+                />
+                <span class="font-lato" style="font-size: 20px"
+                  ><b>Sur Toulouse et ses environs</b></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img
+            src="../assets/images/PhotoZoe.jpg"
+            class="image-pp3"
+            alt="Ma photo"
+            style="margin-top: 40px;"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="isPP" class="img-fond-dessin">
+      <div class="fond-pp-div">
+        <span
+          class="text-style-roboto"
+          style="
+            color: #443f68;
+            display: flex;
+            font-size: 40px;
+            justify-content: center;
+          "
+          ><b>À travers l’acte créatif, un dialogue</b>
+        </span>
+        <br />
+        <br />
+
+        <span
+          class="text-style-roboto"
+          style="
+            color: #443f68;
+            display: flex;
+            font-size: 40px;
+            justify-content: center;
+          "
+          ><b>s’instaure avec soi-même, offrant</b>
+        </span>
+        <br />
+        <br />
+
+        <span
+          class="text-style-roboto"
+          style="
+            color: #443f68;
+            display: flex;
+            font-size: 40px;
+            justify-content: center;
+          "
+          ><b>ainsi une alternative précieuse</b>
+        </span>
+        <br />
+        <br />
+
+        <span
+          class="text-style-roboto"
+          style="
+            color: #443f68;
+            display: flex;
+            font-size: 40px;
+            justify-content: center;
+          "
+          ><b>à l’expression verbale.</b>
+        </span>
+      </div>
+      <br />
+      <div class="btn-emplacement">
+        <button
+          class="btn-consultation"
+          (click)="navigateContact()"
+          style="font-size: 18px"
+        >
+          CONTACTER
+        </button>
+      </div>
+      <br /><br /><br /><br /><br />
+
+      <span
+        class="text-style-roboto"
+        style="
+          color: #443f68;
+          display: flex;
+          font-size: 30px;
+          justify-content: center;
+        "
+        >Zoé BERTRAND, Art-thérapeute certifiée.
+      </span>
+      <br />
+    </div>
+
+    <div
+      *ngIf="isProgramme"
+      class="apropos-fond flex"
+      style="padding-left: 7%; padding-right: 7%"
+    >
+      <div class="titre text-style" style="display: flex">
+        Programme Ateliers collectifs
+      </div>
+      <br /><br />
+      <span class="font-lato" style="display: flex; font-size: 20px"
+        ><b>
+          À travers l’acte créatif, un dialogue s’instaure avec soi-même,
+          offrant ainsi une alternative précieuse à l’expression verbale.
+        </b></span
+      ><br />
+      <span class="font-lato" style="display: flex; font-size: 20px"
+        ><b>
+          Tous les renseignements sur ces ateliers seront mis à jour
+          régulièrement ici.</b
+        > </span
+      ><br /><br />
+
+      <span
+        class="text-style-roboto"
+        style="
+          color: #443f68;
+          display: flex;
+          font-size: 30px;
+          justify-content: center;
+        "
+        ><b> Pas de date d’atelier collectif pour le moment.</b>
+      </span>
     </div>
   </div>
 </div>
 
-<div class="fond">
-  <div *ngIf="isAPropos">
+<div *ngIf="isTouchDevice">
+  <div class="navbar-container">
+    <div class="navbar-left">
+      <span
+        class="text-style mega-titre"
+        (click)="navigatePP()"
+        style="cursor: pointer"
+        >Zoé BERTRAND<span
+          class="color-sous-titre font-lato"
+          style="font-size: 10px"
+          ><b> - ART-THERAPEUTE</b></span
+        ></span
+      >
+    </div>
+  </div>
+
+  <div class="fond">
+    <div *ngIf="isAPropos">
+      <div class="apropos-fond" style="padding-left: 7%; padding-right: 7%">
+        <div class="titre text-style" style="display: flex">A PROPOS</div>
+        <br />
+        <br />
+        <div class="flex-dir-img">
+          <div class="image">
+            <img
+              src="../assets/images/PhotoZoe.jpg"
+              class="image-pp"
+              alt="Ma photo"
+            />
+          </div>
+          <div class="zone-texte">
+            <div class="sous-titre text-style">
+              <span>ZOÉ BERTRAND <br /></span><br />
+              <span class="color-sous-titre font-lato" style="font-size: 25px"
+                ><b>ART-THERAPEUTE</b></span
+              >
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="texte">
+              <span
+                class="texte-propos1 font-lato"
+                style="font-size: 20px; line-height: 1.5"
+                ><b
+                  >Depuis mon plus jeune âge, j’ai été plongée dans un
+                  environnement artistique, ce qui m’a encouragée à explorer
+                  naturellement et à apprécier une variété de médiums. Que ce
+                  soit l’écriture, le dessin, la peinture ou encore la
+                  photographie, toutes ces formes d’expression ont finalement
+                  toujours constitué l’essence de mes centres d’intérêt.
+                  Progressivement, j’ai mis des mots sur ma pratique, et pris
+                  conscience des bienfaits de la création dans ma vie
+                  personnelle.</b
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="espace-div">
+          <span
+            class="texte-propos2 font-lato"
+            style="font-size: 20px; line-height: 1.5"
+            ><b
+              >Aujourd’hui formée et diplômée dans les arts appliqués, et
+              certifiée en art-thérapie, j’ai fait de cette passion mon métier,
+              consciente de l’impact profond que l’art peut avoir sur le
+              psychisme. Ayant toujours eu une grande curiosité pour la
+              psychologie et pour la compréhension du fonctionnement humain,
+              s’est imposé à moi le besoin d’exploiter le côté thérapeutique de
+              l’art en élaborant des protocoles pour aider et soulager à travers
+              lui. À ce jour, je suis pleinement convaincue du potentiel et du
+              pouvoir transformateur que peut apporter l’art dans le processus
+              de guérison.</b
+            ></span
+          >
+        </div>
+
+        <div class="espace-div">
+          <span
+            class="texte-propos3 font-lato"
+            style="font-size: 20px; line-height: 1.5"
+            ><b
+              >En tant qu’art-thérapeute, je m’engage à vous accompagner, à vous
+              guider, et à vous soutenir avec respect et bienveillance dans
+              votre cheminement personnel. Ma mission est de vous encourager à
+              explorer votre monde intérieur à travers l’expression artistique
+              pour vous aider à atteindre un état de mieux-être.</b
+            ></span
+          >
+        </div>
+        <br /><br /><br /><br />
+        <div class="espace-div">
+          <span class="sous-titre text-style">PARCOURS</span><br /><br />
+          <img src="../assets/images/FChrono.JPG" alt="" style="width: 100%" />
+        </div>
+      </div>
+    </div>
+
     <div
-      *ngIf="!isTouchDevice"
+      *ngIf="isArtTherapie"
       class="apropos-fond"
       style="padding-left: 7%; padding-right: 7%"
     >
-      <div class="titre text-style" style="display: flex">A PROPOS</div>
+      <div class="titre text-style" style="display: flex">l'art-therapie</div>
+      <br /><br />
+      <div class="sous-titre text-style">
+        <span class="color-sous-titre" style="display: flex"
+          >Qu'est ce que c'est ?</span
+        ><br />
+      </div>
+
+      <div>
+        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+          ><b
+            >L’art-thérapie occupe une place significative en intégrant la
+            création artistique dans le processus de guérison et d’exploration
+            personnelle. Elle offre une voie alternative lorsque les mots
+            échappent et que les émotions sont difficiles à exprimer, permettant
+            ainsi de communiquer des souffrances qui sont parfois trop complexes
+            pour être verbalisées, tandis que l’inconscient joue un rôle majeur
+            dans ce processus.</b
+          ></span
+        >
+      </div>
+      <br />
+
+      <div>
+        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+          ><b
+            >Ici, vos œuvres naissent à partir de vos ressentis, mettant en
+            avant le processus créatif au-delà du talent artistique. Vos
+            créations deviennent des outils thérapeutiques, où l’accent est mis
+            sur l’expression plutôt que sur le résultat esthétique. Cela peut
+            prendre différentes formes, et les supports utilisés peuvent être
+            nombreux : la peinture, le dessin, le modelage, l’écriture, la
+            danse, la musique, et bien d’autres procédés encore.</b
+          ></span
+        >
+      </div>
+      <br />
+
+      <div>
+        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+          ><b
+            >Grâce à cette approche, vous pourrez explorer les profondeurs de
+            votre psyché, et peut-être découvrir des sentiments enfouis et des
+            aspects inexplorés. Ce cheminement, qui opère comme un processus de
+            transformation, met l’accent sur l’expression libre des émotions et
+            aide à la sublimation de la souffrance ressentie. L’art-thérapeute
+            agit comme un guide pour vous aider à comprendre et à surmonter vos
+            problèmes personnels le plus sereinement possible.</b
+          ></span
+        >
+      </div>
       <br />
       <br />
-      <div class="flex-dir-img">
-        <div class="image">
+      <br />
+      <br />
+      <br />
+
+      <div>
+        <div class="pppi">
+          <div class="pppi1">
+            <img src="../assets/images/Photo-AT1.jpg" alt="" />
+          </div>
+          <div class="pppi1">
+            <img src="../assets/images/Photo-AT2.jpg" alt="" />
+          </div>
+          <div class="pppi1">
+            <img src="../assets/images/Photo-AT3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <div class="ppp">
+        <div class="ppp1">
+          <span
+            class="text-style sous-titre"
+            style="display: flex; justify-content: center"
+            ><b>Pour qui ?</b></span
+          ><br />
+          <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+            ><b
+              >Tout d’abord, pour toute personne désireuse de venir pratiquer
+              l’art-thérapie, puisqu’aucune compétence artistique n’est requise
+              pour participer !<br /><br />
+              - Les enfants, les adolescents, les adultes, les personnes âgées …
+              ><br />
+              L'art-thérapie est une pratique qui s'adresse et s'adapte à tous
+              les âges.<br /><br />
+              - Toute personne qui souhaite atteindre un état de mieux-être.<br />
+              Que vous ressentiez une souffrance psychologique persistante,
+              traversiez une période difficile, ou aspiriez simplement à vous
+              épanouir davantage en bénéficiant d’un soutien dans votre quête
+              d’évolution personnelle.</b
+            ></span
+          >
+        </div>
+        <div class="ppp1">
+          <span
+            class="text-style sous-titre"
+            style="display: flex; justify-content: center"
+            ><b>Pour quoi ?</b></span
+          ><br />
+          <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+            ><b>
+              Grâce à ses techniques variées, au travers des ateliers, dans un
+              espace sécurisé et créatif, l’art-thérapie peut aider, entre
+              autres, à : <br /><br />
+              - Relancer sa créativité<br />
+              - Réduire l’angoisse, l’anxiété et le stress<br />
+              - Apprivoiser ses peurs<br />
+              - Favoriser la communication<br />
+              - Gérer ses émotions<br />
+              - Apprendre à lâcher prise<br />
+              - Renforcer son estime de soi … Confiance en soi, affirmation de
+              soi, amour de soi<br />
+              - Débloquer des conflits<br />
+              - Soulager la souffrance<br />
+              - Renouer le lien avec les autres<br />
+              - Retrouver le plaisir<br />
+              - Redonner du sens à sa vie</b
+            >
+          </span>
+        </div>
+        <div class="ppp1">
+          <span
+            class="text-style sous-titre"
+            style="display: flex; justify-content: center"
+            ><b>Comment ?</b></span
+          ><br />
+          <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+            ><b
+              >En mettant en couleurs et en formes vos pensées, vos émotions et
+              vos expériences, vous pourrez découvrir de nouveaux aspects de
+              vous-même, développer votre créativité et trouver des moyens
+              uniques de vous exprimer et de vous comprendre !<br /><br />
+              Les ateliers vous encouragent à vous explorer, afin de remodeler
+              progressivement la perception que vous avez de vous-même. Cette
+              démarche de découverte de soi se déroule à votre rythme, avec pour
+              objectif une transformation positive.</b
+            ></span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div
+      *ngIf="isConsultations"
+      class="apropos-fond"
+      style="padding-left: 7%; padding-right: 7%"
+    >
+      <div class="titre text-style" style="display: flex">Consultations</div>
+      <br />
+      <br />
+      <div>
+        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+          ><b
+            >Dans mes ateliers, on cherche avant tout à se libérer de ses tracas
+            quotidiens, de son anxiété et de ses pensées négatives, en cherchant
+            à vivre pleinement l’instant présent !</b
+          ></span
+        ><br />
+        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+          ><b
+            >Je vous propose différents types de consultation et d’intervention
+            pour vous accompagner dans ce cheminement.</b
+          ></span
+        >
+      </div>
+      <br />
+      <br />
+      <br />
+
+      <div class="ppp">
+        <div class="ppp1" style="background-color: white; padding: 2%">
+          <span
+            class="text-style"
+            style="font-size: 30px; display: flex; justify-content: center"
+            >Consultations Individutelles</span
+          ><br />
+          <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+            ><b
+              >Séances en visioconférence ou à domicile. <br /><br />Séance en
+              cabinet sur Castanet-Tolosan, tous les vendredis à partir du 19
+              juillet.</b
+            ></span
+          >
+        </div>
+        <div class="ppp1" style="background-color: white; padding: 2%">
+          <span
+            class="text-style"
+            style="font-size: 30px; display: flex; justify-content: center"
+            >Ateliers collectifs</span
+          ><br />
+          <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+            ><b
+              >À Toulouse et dans ses environs, en présentiel, ou en
+              visioconférence, je propose des ateliers sur différents thèmes.</b
+            ></span
+          >
+          <br />
+          <br />
+          <br />
+          <div class="btn-emplacement">
+            <button class="btn-consultation" (click)="navigateProgramme()">
+              Programme ateliers collectifs
+            </button>
+          </div>
+        </div>
+        <div class="ppp1" style="background-color: white; padding: 2%">
+          <span
+            class="text-style"
+            style="font-size: 30px; display: flex; justify-content: center"
+            >intervention en structure</span
+          ><br />
+          <span class="font-lato" style="font-size: 20px; line-height: 1.5"
+            ><b
+              >Je suis disponible à Toulouse et dans ses environs, m’adaptant à
+              différents environnements et contextes pour intervenir dans des
+              structures telles que les EHPAD, les maisons de retraite, les
+              écoles, écoles spécialisées et centres éducatifs, les
+              établissements de soins de santé mentale, les centres avec
+              programme de réadaptation, etc.</b
+            ></span
+          >
+        </div>
+      </div>
+
+      <div>
+        <br /><br /><br />
+        <span class="font-lato" style="font-size: 20px"
+          ><b>
+            N'hésitez pas à me faire part de votre demande et à me contacter
+            pour toute information complémentaire, notamment concernant les
+            tarifs et la durée des consultations, qui dépendent du cadre et de
+            vos besoins spécifiques.<br /><br />
+            N’hésitez pas également à venir me poser toutes vos questions et
+            interrogations.<br />
+            J’y répondrai avec plaisir et avec toute l’attention nécessaire.
+          </b></span
+        >
+      </div>
+    </div>
+
+    <div *ngIf="isContact" class="apropos-fond3">
+      <div
+        style="
+          background-color: rgba(242, 238, 253, 0.75);
+          padding-left: 7%;
+          padding-right: 7%;
+          padding-top: 50px;
+          display: flex;
+          flex-direction: row;
+        "
+      >
+        <div>
+          <div>
+            <div class="titre text-style">Contact</div>
+          </div>
+
+          <div style="display: flex; flex-direction: row">
+            <div>
+              <br />
+              <br />
+              <br />
+              <div>
+                <span class="font-lato" style="font-size: 30px"
+                  ><b>Zoé Bertrand</b></span
+                >
+              </div>
+              <br />
+              <div>
+                <span class="font-lato" style="font-size: 25px"
+                  ><b>Art-thérapeute</b></span
+                >
+              </div>
+
+              <br /><br /><br />
+              <div style="display: flex; align-items: center">
+                <img
+                  src="../assets/images/icon-tel.jpg"
+                  alt=""
+                  style="height: 40px; width: 40px; margin-right: 10px"
+                />
+                <span class="font-lato" style="font-size: 20px"
+                  ><b> 06 38 14 37 99</b></span
+                >
+              </div>
+              <br /><br />
+              <div
+                style="display: flex; align-items: center; padding-bottom: 50px"
+              >
+                <img
+                  src="../assets/images/icon-email.jpg"
+                  alt=""
+                  style="height: 40px; width: 40px; margin-right: 10px"
+                />
+                <span class="font-lato" style="font-size: 20px"
+                  ><b> zb.artherapie@gmail.com</b></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
           <img
             src="../assets/images/PhotoZoe.jpg"
-            class="image-pp"
+            class="image-pp3"
             alt="Ma photo"
           />
         </div>
-        <div class="zone-texte">
-          <div class="sous-titre text-style">
-            <span>ZOÉ BERTRAND <br /></span><br />
-            <span class="color-sous-titre font-lato" style="font-size: 25px"
-              ><b>ART-THERAPEUTE</b></span
-            >
-          </div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <div class="texte">
-            <span
-              class="texte-propos1 font-lato"
-              style="font-size: 20px; line-height: 1.5"
-              ><b
-                >Depuis mon plus jeune âge, j’ai été plongée dans un
-                environnement artistique, ce qui m’a encouragée à explorer
-                naturellement et à apprécier une variété de médiums. Que ce soit
-                l’écriture, le dessin, la peinture ou encore la photographie,
-                toutes ces formes d’expression ont finalement toujours constitué
-                l’essence de mes centres d’intérêt. Progressivement, j’ai mis
-                des mots sur ma pratique, et pris conscience des bienfaits de la
-                création dans ma vie personnelle.</b
-              ></span
-            >
-          </div>
-        </div>
       </div>
+    </div>
 
-      <div class="espace-div">
+    <div *ngIf="isPP" class="img-fond-dessin">
+      <div class="fond-pp-div">
         <span
-          class="texte-propos2 font-lato"
-          style="font-size: 20px; line-height: 1.5"
-          ><b
-            >Aujourd’hui formée et diplômée dans les arts appliqués, et
-            certifiée en art-thérapie, j’ai fait de cette passion mon métier,
-            consciente de l’impact profond que l’art peut avoir sur le
-            psychisme. Ayant toujours eu une grande curiosité pour la
-            psychologie et pour la compréhension du fonctionnement humain, s’est
-            imposé à moi le besoin d’exploiter le côté thérapeutique de l’art en
-            élaborant des protocoles pour aider et soulager à travers lui. À ce
-            jour, je suis pleinement convaincue du potentiel et du pouvoir
-            transformateur que peut apporter l’art dans le processus de
-            guérison.</b
-          ></span
-        >
-      </div>
-
-      <div class="espace-div">
-        <span
-          class="texte-propos3 font-lato"
-          style="font-size: 20px; line-height: 1.5"
-          ><b
-            >En tant qu’art-thérapeute, je m’engage à vous accompagner, à vous
-            guider, et à vous soutenir avec respect et bienveillance dans votre
-            cheminement personnel. Ma mission est de vous encourager à explorer
-            votre monde intérieur à travers l’expression artistique pour vous
-            aider à atteindre un état de mieux-être.</b
-          ></span
-        >
-      </div>
-      <br /><br /><br /><br />
-      <div class="espace-div">
-        <span class="sous-titre text-style">PARCOURS</span><br /><br />
-
-        <!-- <span class="text-style-roboto"><b>2024</b></span
-        ><br />
-        <span class="text-style-roboto">Certification d’art-thérapie.</span
-        ><br /><br />
-
-        <span class="text-style-roboto"><b>2023</b></span
-        ><br />
-        <span class="text-style-roboto"
-          >Assistante art-thérapeute à la clinique psychiatrique, Maison de
-          Santé Mailhol dans le cadre d’un stage.<br />
-          - Accompagnement de patients dans l’atelier.<br />
-          - Création et animation d’un suivi d’ateliers pour un groupe de
-          patients<br />
-          - Petites interventions pour des exercices d’art-thérapie en hôpital
-          de jour.<br /><br />
+          class="text-style-roboto"
+          style="
+            color: #443f68;
+            display: flex;
+            font-size: 40px;
+            justify-content: center;
+          "
+          ><b>À travers l’acte créatif, un dialogue</b>
         </span>
-
-        <span class="text-style-roboto"><b>Depuis 2021</b></span
-        ><br />
-        <span class="text-style-roboto"
-          >Animatrice et AVL (Accompagnante de vie et de loisirs), sur les temps
-          périscolaires.<br />
-          - Accompagnement d’un enfant en situation de handicap dans diverses
-          activités ludiques, artistiques …<br />
-          - Mise en œuvre également de diverses animations pour des groupes
-          d’enfants.<br /><br />
-        </span>
-
-        <span class="text-style-roboto"><b>2020</b></span
-        ><br />
-        <span class="text-style-roboto"
-          >Licence d’Arts, parcours Design, Prospective et Société.<br /><br
-        /></span>
-
-        <span class="text-style-roboto"><b>2018</b></span
-        ><br />
-        <span class="text-style-roboto"
-          >BTS en Design d’espace<br /><br
-        /></span>
-
-        <span class="text-style-roboto"><b>2016</b></span
-        ><br />
-        <span class="text-style-roboto"
-          >Mise à niveau en arts appliqués<br /><br
-        /></span> -->
-        <img src="../assets/images/FChrono.JPG" alt="" style="width: 100%" />
-      </div>
-    </div>
-
-    <!-- <div *ngIf="isTouchDevice" class="apropos-fond2">
-      <div class="image2">
-        <img
-          src="../assets/images/photoCopie.jpg"
-          class="image-pp2"
-          alt="Ma photo"
-        />
-      </div>
-
-      <div class="zone-texte">
-        <div class="titre">A PROPOS</div>
-        <div class="sous-titre">ZOÉ BERTRAND ART-THERAPEUTE</div>
-        <div class="texte">
-          <p>blabla</p>
-        </div>
-      </div>
-
-      <div>blalba</div>
-    </div> -->
-  </div>
-
-  <div
-    *ngIf="isArtTherapie"
-    class="apropos-fond"
-    style="padding-left: 7%; padding-right: 7%"
-  >
-    <div class="titre text-style" style="display: flex">l'art-therapie</div>
-    <br /><br />
-    <div class="sous-titre text-style">
-      <span class="color-sous-titre" style="display: flex"
-        >Qu'est ce que c'est ?</span
-      ><br />
-    </div>
-
-    <div>
-      <span class="font-lato" style="font-size: 20px; line-height: 1.5"
-        ><b
-          >L’art-thérapie occupe une place significative en intégrant la
-          création artistique dans le processus de guérison et d’exploration
-          personnelle. Elle offre une voie alternative lorsque les mots
-          échappent et que les émotions sont difficiles à exprimer, permettant
-          ainsi de communiquer des souffrances qui sont parfois trop complexes
-          pour être verbalisées, tandis que l’inconscient joue un rôle majeur
-          dans ce processus.</b
-        ></span
-      >
-    </div>
-    <br />
-
-    <div>
-      <span class="font-lato" style="font-size: 20px; line-height: 1.5"
-        ><b
-          >Ici, vos œuvres naissent à partir de vos ressentis, mettant en avant
-          le processus créatif au-delà du talent artistique. Vos créations
-          deviennent des outils thérapeutiques, où l’accent est mis sur
-          l’expression plutôt que sur le résultat esthétique. Cela peut prendre
-          différentes formes, et les supports utilisés peuvent être nombreux :
-          la peinture, le dessin, le modelage, l’écriture, la danse, la musique,
-          et bien d’autres procédés encore.</b
-        ></span
-      >
-    </div>
-    <br />
-
-    <div>
-      <span class="font-lato" style="font-size: 20px; line-height: 1.5"
-        ><b
-          >Grâce à cette approche, vous pourrez explorer les profondeurs de
-          votre psyché, et peut-être découvrir des sentiments enfouis et des
-          aspects inexplorés. Ce cheminement, qui opère comme un processus de
-          transformation, met l’accent sur l’expression libre des émotions et
-          aide à la sublimation de la souffrance ressentie. L’art-thérapeute
-          agit comme un guide pour vous aider à comprendre et à surmonter vos
-          problèmes personnels le plus sereinement possible.</b
-        ></span
-      >
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-
-    <div>
-      <div class="pppi">
-        <div class="pppi1">
-          <img src="../assets/images/Photo-AT1.jpg" alt="" />
-        </div>
-        <div class="pppi1">
-          <img src="../assets/images/Photo-AT2.jpg" alt="" />
-        </div>
-        <div class="pppi1">
-          <img src="../assets/images/Photo-AT3.jpg" alt="" />
-        </div>
-      </div>
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-
-    <div class="ppp">
-      <div class="ppp1">
-        <span
-          class="text-style sous-titre"
-          style="display: flex; justify-content: center"
-          ><b>Pour qui ?</b></span
-        ><br />
-        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
-          ><b
-            >Tout d’abord, pour toute personne désireuse de venir pratiquer
-            l’art-thérapie, puisqu’aucune compétence artistique n’est requise
-            pour participer !<br /><br />
-            - Les enfants, les adolescents, les adultes, les personnes âgées …
-            ><br />
-            L'art-thérapie est une pratique qui s'adresse et s'adapte à tous les
-            âges.<br /><br />
-            - Toute personne qui souhaite atteindre un état de mieux-être.<br />
-            Que vous ressentiez une souffrance psychologique persistante,
-            traversiez une période difficile, ou aspiriez simplement à vous
-            épanouir davantage en bénéficiant d’un soutien dans votre quête
-            d’évolution personnelle.</b
-          ></span
-        >
-      </div>
-      <div class="ppp1">
-        <span
-          class="text-style sous-titre"
-          style="display: flex; justify-content: center"
-          ><b>Pour quoi ?</b></span
-        ><br />
-        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
-          ><b>
-            Grâce à ses techniques variées, au travers des ateliers, dans un
-            espace sécurisé et créatif, l’art-thérapie peut aider, entre autres,
-            à : <br /><br />
-            - Relancer sa créativité<br />
-            - Réduire l’angoisse, l’anxiété et le stress<br />
-            - Apprivoiser ses peurs<br />
-            - Favoriser la communication<br />
-            - Gérer ses émotions<br />
-            - Apprendre à lâcher prise<br />
-            - Renforcer son estime de soi … Confiance en soi, affirmation de
-            soi, amour de soi<br />
-            - Débloquer des conflits<br />
-            - Soulager la souffrance<br />
-            - Renouer le lien avec les autres<br />
-            - Retrouver le plaisir<br />
-            - Redonner du sens à sa vie</b
-          >
-        </span>
-      </div>
-      <div class="ppp1">
-        <span
-          class="text-style sous-titre"
-          style="display: flex; justify-content: center"
-          ><b>Comment ?</b></span
-        ><br />
-        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
-          ><b
-            >En mettant en couleurs et en formes vos pensées, vos émotions et
-            vos expériences, vous pourrez découvrir de nouveaux aspects de
-            vous-même, développer votre créativité et trouver des moyens uniques
-            de vous exprimer et de vous comprendre !<br /><br />
-            Les ateliers vous encouragent à vous explorer, afin de remodeler
-            progressivement la perception que vous avez de vous-même. Cette
-            démarche de découverte de soi se déroule à votre rythme, avec pour
-            objectif une transformation positive.</b
-          ></span
-        >
-      </div>
-    </div>
-  </div>
-
-  <div
-    *ngIf="isConsultations"
-    class="apropos-fond"
-    style="padding-left: 7%; padding-right: 7%"
-  >
-    <div class="titre text-style" style="display: flex">Consultations</div>
-    <br />
-    <br />
-    <div>
-      <span class="font-lato" style="font-size: 20px; line-height: 1.5"
-        ><b
-          >Dans mes ateliers, on cherche avant tout à se libérer de ses tracas
-          quotidiens, de son anxiété et de ses pensées négatives, en cherchant à
-          vivre pleinement l’instant présent !</b
-        ></span
-      ><br />
-      <span class="font-lato" style="font-size: 20px; line-height: 1.5"
-        ><b
-          >Je vous propose différents types de consultation et d’intervention
-          pour vous accompagner dans ce cheminement.</b
-        ></span
-      >
-    </div>
-    <br />
-    <br />
-    <br />
-
-    <div class="ppp">
-      <div class="ppp1" style="background-color: white; padding: 2%">
-        <span
-          class="text-style"
-          style="font-size: 30px; display: flex; justify-content: center"
-          >Consultations Individutelles</span
-        ><br />
-        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
-          ><b
-            >Séances en visioconférence ou à domicile. <br /><br />Séance en
-            cabinet sur Castanet-Tolosan, tous les vendredis à partir du 19
-            juillet.</b
-          ></span
-        >
-      </div>
-      <div class="ppp1" style="background-color: white; padding: 2%">
-        <span
-          class="text-style"
-          style="font-size: 30px; display: flex; justify-content: center"
-          >Ateliers collectifs</span
-        ><br />
-        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
-          ><b
-            >À Toulouse et dans ses environs, en présentiel, ou en
-            visioconférence, je propose des ateliers sur différents thèmes.</b
-          ></span
-        >
         <br />
         <br />
-        <br />
-        <div class="btn-emplacement">
-          <button class="btn-consultation" (click)="navigateProgramme()">
-            Programme ateliers collectifs
-          </button>
-        </div>
-      </div>
-      <div class="ppp1" style="background-color: white; padding: 2%">
+
         <span
-          class="text-style"
-          style="font-size: 30px; display: flex; justify-content: center"
-          >intervention en structure</span
-        ><br />
-        <span class="font-lato" style="font-size: 20px; line-height: 1.5"
-          ><b
-            >Je suis disponible à Toulouse et dans ses environs, m’adaptant à
-            différents environnements et contextes pour intervenir dans des
-            structures telles que les EHPAD, les maisons de retraite, les
-            écoles, écoles spécialisées et centres éducatifs, les établissements
-            de soins de santé mentale, les centres avec programme de
-            réadaptation, etc.</b
-          ></span
-        >
+          class="text-style-roboto"
+          style="
+            color: #443f68;
+            display: flex;
+            font-size: 40px;
+            justify-content: center;
+          "
+          ><b>s’instaure avec soi-même, offrant</b>
+        </span>
+        <br />
+        <br />
+
+        <span
+          class="text-style-roboto"
+          style="
+            color: #443f68;
+            display: flex;
+            font-size: 40px;
+            justify-content: center;
+          "
+          ><b>ainsi une alternative précieuse</b>
+        </span>
+        <br />
+        <br />
+
+        <span
+          class="text-style-roboto"
+          style="
+            color: #443f68;
+            display: flex;
+            font-size: 40px;
+            justify-content: center;
+          "
+          ><b>à l’expression verbale.</b>
+        </span>
       </div>
+      <br />
+      <div class="btn-emplacement">
+        <button
+          class="btn-consultation"
+          (click)="navigateContact()"
+          style="font-size: 18px"
+        >
+          CONTACTER
+        </button>
+      </div>
+      <br /><br /><br /><br /><br />
+
+      <span
+        class="text-style-roboto"
+        style="
+          color: #443f68;
+          display: flex;
+          font-size: 30px;
+          justify-content: center;
+        "
+        >Zoé BERTRAND, Art-thérapeute certifiée.
+      </span>
+      <br />
     </div>
 
-    <div>
-      <br /><br /><br />
-      <span class="font-lato" style="font-size: 20px"
-        ><b>
-          N'hésitez pas à me faire part de votre demande et à me contacter pour
-          toute information complémentaire, notamment concernant les tarifs et
-          la durée des consultations, qui dépendent du cadre et de vos besoins
-          spécifiques.<br /><br />
-          N’hésitez pas également à venir me poser toutes vos questions et
-          interrogations.<br />
-          J’y répondrai avec plaisir et avec toute l’attention nécessaire.
-        </b></span
-      >
-    </div>
-  </div>
-
-  <div *ngIf="isContact" class="apropos-fond3">
     <div
-      style="
-        background-color: rgba(242, 238, 253, 0.75);
-        padding-left: 7%;
-        padding-right: 7%;
-        padding-top: 50px;
-        display: flex;
-        flex-direction: row;
-      "
+      *ngIf="isProgramme"
+      class="apropos-fond flex"
+      style="padding-left: 7%; padding-right: 7%"
     >
-      <div style="flex: 1;">
-        <div>
-          <div class="titre text-style" style="display: flex">Contact</div>
-        </div>
-
-        <div style="display: flex; flex-direction: row">
-          <div>
-            <br />
-            <br />
-            <br />
-            <div>
-              <span class="font-lato" style="font-size: 30px"
-                ><b>Zoé Bertrand</b></span
-              >
-            </div>
-            <br />
-            <div>
-              <span class="font-lato" style="font-size: 25px"
-                ><b>Art-thérapeute</b></span
-              >
-            </div>
-
-            <br /><br /><br />
-            <div style="display: flex; align-items: center">
-              <img
-                src="../assets/images/icon-tel.jpg"
-                alt=""
-                style="height: 40px; width: 40px; margin-right: 10px"
-              />
-              <span class="font-lato" style="font-size: 20px"
-                ><b> 06 38 14 37 99</b></span
-              >
-            </div>
-            <br /><br />
-            <div style="display: flex; align-items: center; padding-bottom: 50px;">
-              <img
-                src="../assets/images/icon-email.jpg"
-                alt=""
-                style="height: 40px; width: 40px; margin-right: 10px"
-              />
-              <span class="font-lato" style="font-size: 20px"
-                ><b>zb.artherapie@gmail.com</b></span
-              >
-              
-            </div>
-          </div>
-          
-        </div>
+      <div class="titre text-style" style="display: flex">
+        Programme Ateliers collectifs
       </div>
-      <div>
-        <img
-          src="../assets/images/PhotoZoe.jpg"
-          class="image-pp3"
-          alt="Ma photo"
-        />
-      </div>
-    </div>
-  </div>
-
-  <div *ngIf="isPP" class="img-fond-dessin">
-    <div class="fond-pp-div">
-      <span
-        class="text-style-roboto"
-        style="
-          color: #443f68;
-          display: flex;
-          font-size: 40px;
-          justify-content: center;
-        "
-        ><b>À travers l’acte créatif, un dialogue</b>
-      </span>
-      <br />
-      <br />
+      <br /><br />
+      <span class="font-lato" style="display: flex; font-size: 20px"
+        ><b>
+          À travers l’acte créatif, un dialogue s’instaure avec soi-même,
+          offrant ainsi une alternative précieuse à l’expression verbale.
+        </b></span
+      ><br />
+      <span class="font-lato" style="display: flex; font-size: 20px"
+        ><b>
+          Tous les renseignements sur ces ateliers seront mis à jour
+          régulièrement ici.</b
+        > </span
+      ><br /><br />
 
       <span
         class="text-style-roboto"
         style="
           color: #443f68;
           display: flex;
-          font-size: 40px;
+          font-size: 30px;
           justify-content: center;
         "
-        ><b>s’instaure avec soi-même, offrant</b>
-      </span>
-      <br />
-      <br />
-
-      <span
-        class="text-style-roboto"
-        style="
-          color: #443f68;
-          display: flex;
-          font-size: 40px;
-          justify-content: center;
-        "
-        ><b>ainsi une alternative précieuse</b>
-      </span>
-      <br />
-      <br />
-
-      <span
-        class="text-style-roboto"
-        style="
-          color: #443f68;
-          display: flex;
-          font-size: 40px;
-          justify-content: center;
-        "
-        ><b>à l’expression verbale.</b>
+        ><b> Pas de date d’atelier collectif pour le moment.</b>
       </span>
     </div>
-    <br />
-    <div class="btn-emplacement">
-      <button
-        class="btn-consultation"
-        (click)="navigateContact()"
-        style="font-size: 18px"
-      >
-        CONTACTER
-      </button>
-    </div>
-    <br /><br /><br /><br /><br />
-
-    <span
-      class="text-style-roboto"
-      style="
-        color: #443f68;
-        display: flex;
-        font-size: 30px;
-        justify-content: center;
-      "
-      >Zoé BERTRAND, Art-thérapeute certifiée.
-    </span>
-    <br />
-  </div>
-
-  <div
-    *ngIf="isProgramme"
-    class="apropos-fond flex"
-    style="padding-left: 7%; padding-right: 7%"
-  >
-    <div class="titre text-style" style="display: flex">
-      Programme Ateliers collectifs
-    </div>
-    <br /><br />
-    <span class="font-lato" style="display: flex; font-size: 20px"
-      ><b>
-        À travers l’acte créatif, un dialogue s’instaure avec soi-même, offrant
-        ainsi une alternative précieuse à l’expression verbale.
-      </b></span
-    ><br />
-    <span class="font-lato" style="display: flex; font-size: 20px"
-      ><b>
-        Tous les renseignements sur ces ateliers seront mis à jour régulièrement
-        ici.</b
-      > </span
-    ><br /><br />
-
-    <span
-      class="text-style-roboto"
-      style="
-        color: #443f68;
-        display: flex;
-        font-size: 30px;
-        justify-content: center;
-      "
-      ><b> Pas de date d’atelier collectif pour le moment.</b>
-    </span>
   </div>
 </div>

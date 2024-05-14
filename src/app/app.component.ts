@@ -26,14 +26,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.isTouchDevice = navigator.maxTouchPoints > 0;
     console.log(this.isTouchDevice);
-
-    if(this.isTouchDevice == true){
-    this.isAPropos = true;
-    this.isArtTherapie = true;
-    this.isConsultations = true;
-    this.isContact = true;
-    this.isProgramme = false;
-    }
   }
 
   
