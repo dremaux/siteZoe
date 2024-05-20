@@ -353,7 +353,7 @@
           <span
             class="text-style"
             style="font-size: 30px; display: flex; justify-content: center; white-space: nowrap;"
-            >Consultations Indiviutelles</span
+            >Consultations Individuelles</span
           ><br /><br />
           <span class="font-lato" style="font-size: 20px; line-height: 1.5"
             ><b
@@ -622,14 +622,35 @@
 </div>
 
 <div *ngIf="isTouchDevice">
-<div class="construction">
-        <h2 style="margin-left: 10%; margin-right: 10%;">Le site ne prend pas en compte les téléphones pour le moment.</h2>
-        <p>Revenez bientôt !</p>
-        <br>
-        <p>version PC fonctionnelle</p>
-        <a href="https://zbartherapie-44509.web.app/">https://zbartherapie-44509.web.app/</a>
-        <div>
-          <a href="https://www.linkedin.com/in/zo%C3%A9-bertrand-4a2165220/" class="btn">→ Linkedin ←</a>
-        </div>
-      </div>
+  <div class="navbar-container">
+    <div style="display: flex; font-size: 18px; width: 70%;">
+      <span
+        class="text-style"
+        (click)="navigatePP()"
+        style="cursor: pointer; padding-left: 5%"
+        >Zoé BERTRAND<span
+          class="color-sous-titre font-lato"
+          ><b> - ART-THÉRAPEUTE</b></span
+        ></span
+      >
+    
+    </div>
+    <div style="width: 30%; display: flex; justify-content: flex-end; padding-right: 5%;"><button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voice mail</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+    </mat-menu></div>
+  </div>
 </div>
