@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 
@@ -9,16 +9,19 @@ import {MatButtonModule} from '@angular/material/button';
 })
 export class AppComponent implements OnInit {
 
+  @ViewChild('contentToCopy', { static: true }) contentToCopy!: ElementRef;
 
   isAPropos:boolean = false;
-  isArtTherapie:boolean = false;
+  isArtTherapie:boolean = true;
   isConsultations:boolean = false;
   isContact:boolean = false;
-  isPP:boolean = true;
+  isPP:boolean = false;
   isProgramme:boolean = false;
 
   isTouchDevice?: boolean;
   dropdownVisible: boolean = false;
+
+  copySuccess: boolean = false;
 
   
 
@@ -123,6 +126,17 @@ export class AppComponent implements OnInit {
       behavior: 'smooth'
     });
   }
+
+
+  copyText(num: string): void {
+    navigator.clipboard.writeText(num).then(() => {
+      this.copySuccess = true;
+      setTimeout(() => this.copySuccess = false, 2000);
+    }).catch(err => {
+      console.error('Could not copy text: ', err);
+    });
+  }
+
   
 
 
