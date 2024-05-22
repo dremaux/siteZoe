@@ -12,10 +12,10 @@ export class AppComponent implements OnInit {
   @ViewChild('contentToCopy', { static: true }) contentToCopy!: ElementRef;
 
   isAPropos:boolean = false;
-  isArtTherapie:boolean = true;
+  isArtTherapie:boolean = false;
   isConsultations:boolean = false;
   isContact:boolean = false;
-  isPP:boolean = false;
+  isPP:boolean = true;
   isProgramme:boolean = false;
 
   isTouchDevice?: boolean;
@@ -29,6 +29,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.isTouchDevice = navigator.maxTouchPoints > 0;
     console.log(this.isTouchDevice);
+
+    console.log("yo, zoui, gang gang ! Agent K")
   }
 
   
