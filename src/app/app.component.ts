@@ -43,6 +43,10 @@ export class AppComponent implements OnInit {
     this.isPP = false;
     this.isProgramme = false;
     this.dropdownVisible = false;
+
+    setTimeout(() => {
+      this.scrollToTop();
+    }, 100);
   }
 
   navigateArtTherapie(): void {
@@ -83,6 +87,10 @@ export class AppComponent implements OnInit {
     this.isPP = false;
     this.isProgramme = false;
     this.dropdownVisible = false;
+
+    setTimeout(() => {
+      this.scrollToTop();
+    }, 100);
   }
 
   navigateContact(): void {
@@ -93,6 +101,10 @@ export class AppComponent implements OnInit {
     this.isPP = false;
     this.isProgramme = false;
     this.dropdownVisible = false;
+
+    setTimeout(() => {
+      this.scrollToTop();
+    }, 100);
   }
 
   navigatePP(): void {
@@ -103,6 +115,10 @@ export class AppComponent implements OnInit {
     this.isPP = true;
     this.isProgramme = false;
     this.dropdownVisible = false;
+
+    setTimeout(() => {
+      this.scrollToTop();
+    }, 100);
   }
 
   navigateProgramme(): void {
@@ -113,6 +129,10 @@ export class AppComponent implements OnInit {
     this.isPP = false;
     this.isProgramme = true;
     this.dropdownVisible = false;
+
+    setTimeout(() => {
+      this.scrollToTop();
+    }, 100);
   }
 
   scrollToBottom(): void {
@@ -132,7 +152,7 @@ export class AppComponent implements OnInit {
 
   copyText(num: string): void {
     navigator.clipboard.writeText(num).then(() => {
-      this.copySuccess = true;
+      console.log("copie ok");
       setTimeout(() => this.copySuccess = false, 2000);
     }).catch(err => {
       console.error('Could not copy text: ', err);
